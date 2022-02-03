@@ -1,4 +1,7 @@
-﻿using Tools;
+﻿using CommonClasses;
+using InputControllers;
+using Player;
+using Tools;
 using UnityEngine;
 
 public class InputGameController : BaseController
@@ -9,7 +12,7 @@ public class InputGameController : BaseController
         _view.Init(leftMove, rightMove, car.Speed);
     }
 
-    private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/StickControl"};
+    private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/TouchInput"};
     private BaseInputView _view;
 
     private BaseInputView LoadView()

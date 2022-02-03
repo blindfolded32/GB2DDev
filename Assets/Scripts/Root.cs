@@ -1,10 +1,10 @@
-﻿using Profile;
+﻿using CommonClasses;
+using Player;
 using UnityEngine;
 
 public class Root : MonoBehaviour
 {
-    [SerializeField] 
-    private Transform _placeForUi;
+    [SerializeField] private Transform _placeForUi;
 
     private MainController _mainController;
 

@@ -1,8 +1,10 @@
-﻿using JoostenProductions;
+﻿using InputControllers;
+using JoostenProductions;
 using Tools;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
-public class InputAcceleration : BaseInputView
+internal class InputJoystickView : BaseInputView
 {
     public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
     {
@@ -17,14 +19,10 @@ public class InputAcceleration : BaseInputView
 
     private void Move()
     {
-        var direction = Vector3.zero; 
-        direction.x = -Input.acceleration.y;
-        direction.z = Input.acceleration.x;
-        
-        if (direction.sqrMagnitude > 1)
-            direction.Normalize();
-        
-        OnRightMove(direction.sqrMagnitude / 20 * _speed);
+        float moveStep = 10 * Time.deltaTime * CrossPlatformInputManager.GetAxis("Horizontal");
+        if (moveStep > 0)
+            OnRightMove(moveStep);
+        else if (moveStep < 0)
+            OnLeftMove(moveStep);
     }
 }
-

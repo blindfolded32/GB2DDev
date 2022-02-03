@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using InputControllers;
 using JoostenProductions;
 using Tools;
 using UnityEngine;
 
 public class TouchInputView : BaseInputView
 {
+    [SerializeField] private GameObject _trail;
     private float _speed = 0.0f;
     private float _tapAcceleration = 0.1f;
     private float _slowUpPerSecond = 0.5f;
@@ -25,6 +27,7 @@ public class TouchInputView : BaseInputView
 
             if (touch.phase == TouchPhase.Began)
             {
+                CreateTrail(touch.position);
                 if (touch.position.x > halfScreenWidth)
                 {
                     AddAcceleration(_tapAcceleration);
@@ -34,6 +37,11 @@ public class TouchInputView : BaseInputView
                 {
                     AddAcceleration(-_tapAcceleration);
                 }
+            }
+
+            if (touch.phase == TouchPhase.Moved)
+            {
+                _trail.transform.position = touch.position;
             }
         }
 
@@ -45,7 +53,6 @@ public class TouchInputView : BaseInputView
     {
         _speed = Mathf.Clamp(_speed + acc, -1f, 1f);
     }
-
     private void Move()
     {
         if(_speed < 0)
@@ -53,15 +60,18 @@ public class TouchInputView : BaseInputView
         else
             OnRightMove(_speed);
     }
-
     private void Slowdown()
     {
         var sgn = Mathf.Sign(_speed);
         _speed = Mathf.Clamp01(Mathf.Abs(_speed) - _slowUpPerSecond*Time.deltaTime) * sgn;
     }
-
     void OnDestroy()
     {
         UpdateManager.UnsubscribeFromUpdate(OnUpdate);
+    }
+    
+    public GameObject CreateTrail(Vector3 position)
+    {
+        return Instantiate(_trail, position, Quaternion.identity);
     }
 }

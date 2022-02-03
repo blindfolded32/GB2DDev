@@ -1,4 +1,6 @@
-﻿using Profile;
+﻿using CommonClasses;
+using Player;
+//using Profile;
 using UnityEngine;
 
 public class MainMenuController : BaseController

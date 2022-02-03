@@ -1,4 +1,4 @@
-﻿namespace Profile
+﻿namespace CommonClasses
 {
     public enum GameState
     {
