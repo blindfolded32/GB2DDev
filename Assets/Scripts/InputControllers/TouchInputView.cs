@@ -27,7 +27,6 @@ public class TouchInputView : BaseInputView
 
             if (touch.phase == TouchPhase.Began)
             {
-                CreateTrail(touch.position);
                 if (touch.position.x > halfScreenWidth)
                 {
                     AddAcceleration(_tapAcceleration);
@@ -38,13 +37,7 @@ public class TouchInputView : BaseInputView
                     AddAcceleration(-_tapAcceleration);
                 }
             }
-
-            if (touch.phase == TouchPhase.Moved)
-            {
-                _trail.transform.position = touch.position;
-            }
         }
-
         Move();
         Slowdown();
     }
@@ -68,10 +61,6 @@ public class TouchInputView : BaseInputView
     void OnDestroy()
     {
         UpdateManager.UnsubscribeFromUpdate(OnUpdate);
-    }
-    
-    public GameObject CreateTrail(Vector3 position)
-    {
-        return Instantiate(_trail, position, Quaternion.identity);
-    }
+    }  
+  
 }

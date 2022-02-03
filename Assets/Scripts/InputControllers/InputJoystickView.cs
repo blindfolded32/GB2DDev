@@ -2,7 +2,7 @@
 using JoostenProductions;
 using Tools;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+//using UnityStandardAssets.CrossPlatformInput;
 
 internal class InputJoystickView : BaseInputView
 {
@@ -19,10 +19,10 @@ internal class InputJoystickView : BaseInputView
 
     private void Move()
     {
-        float moveStep = 10 * Time.deltaTime * CrossPlatformInputManager.GetAxis("Horizontal");
+        /*float moveStep = 10 * Time.deltaTime * CrossPlatformInputManager.GetAxis("Horizontal");
         if (moveStep > 0)
             OnRightMove(moveStep);
         else if (moveStep < 0)
-            OnLeftMove(moveStep);
+            OnLeftMove(moveStep);*/
     }
 }

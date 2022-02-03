@@ -15,7 +15,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputAcceleration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/BaseInputView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
@@ -24,10 +23,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorTrail.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/TouchInputView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputJoystickView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/TouchStruct.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/Swipe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputSwipe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuController.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="24W9hyX8q1ha3J8k7ClOo3Wuamw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -74,6 +80,7 @@
       <updated>1643735603076</updated>
       <workItem from="1643735609309" duration="2449000" />
       <workItem from="1643797805179" duration="3330000" />
+      <workItem from="1643871886580" duration="6214000" />
     </task>
     <servers />
   </component>
