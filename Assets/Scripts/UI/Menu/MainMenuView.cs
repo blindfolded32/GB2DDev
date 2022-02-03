@@ -1,6 +1,7 @@
 ﻿using System;
 using CommonClasses;
 using JoostenProductions;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -30,10 +31,9 @@ namespace UI.Menu
                 UpdateTouch?.Invoke(touch);
             }
         }
-
         public GameObject CreateTrail(Vector2 position)
         {
-            return Instantiate(_trail, position, Quaternion.identity);
+            return Instantiate(_trail, position,quaternion.identity);
         }
         protected void OnDestroy()
         {

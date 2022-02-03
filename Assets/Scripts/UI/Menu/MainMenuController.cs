@@ -43,7 +43,9 @@ namespace UI.Menu
                 case TouchPhase.Moved:
                     if (_trails.TryGetValue(data.fingerId, out var trail))
                     {
-                        trail.transform.position = data.position;
+                        
+                        var pos = new Vector3( Camera.main.ScreenToWorldPoint(data.position).x, Camera.main.ScreenToWorldPoint(data.position).y,0);
+                        trail.transform.position = pos;
                     }
                     break;
                 case TouchPhase.Stationary:
