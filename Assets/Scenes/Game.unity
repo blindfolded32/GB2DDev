@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 693758136}
   - component: {fileID: 693758135}
   - component: {fileID: 693758134}
+  - component: {fileID: 693758137}
   m_Layer: 0
   m_Name: UiContainer
   m_TagString: Untagged
@@ -307,6 +308,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &693758137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693758132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a83e919db7f472abfe27c7c33d39269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1002511159
 GameObject:
   m_ObjectHideFlags: 0

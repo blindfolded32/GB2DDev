@@ -12,7 +12,7 @@ public class InputGameController : BaseController
         _view.Init(leftMove, rightMove, car.Speed);
     }
 
-    private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/TouchInput"};
+    private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/AccInput"};
     private BaseInputView _view;
 
     private BaseInputView LoadView()
