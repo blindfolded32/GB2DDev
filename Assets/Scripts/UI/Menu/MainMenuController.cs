@@ -1,21 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using CommonClasses;
+using Model.Analytic;
 using Player;
+using Tools.Ads;
 using UnityEngine;
-using Object = UnityEngine.Object; 
+using Object = UnityEngine.Object;
+using ProfilePlayer = Model.ProfilePlayer;
+
 namespace UI.Menu
 {
     public class MainMenuController : BaseController
     {
+        private readonly IAnalyticTools _analytics;
+        private readonly IAdsShower _ads;
+
+        
+        
         private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/mainMenu"};
         private readonly ProfilePlayer _profilePlayer;
         private readonly MainMenuView _view;
         private Dictionary<int, GameObject> _trails = new Dictionary<int, GameObject>();
 
-        public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer)
+        
+        public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer, IAnalyticTools analytics, IAdsShower ads)
         {
             _profilePlayer = profilePlayer;
+            _analytics = analytics;
+            _ads = ads;
             _view = LoadView(placeForUi);
             _view.Init(StartGame);
             _view.UpdateTouch += OnTouch;
@@ -30,6 +42,8 @@ namespace UI.Menu
 
         private void StartGame()
         {
+            _analytics.SendMessage("Start", new Dictionary<string, object>());
+            _ads.ShowInterstitial();
             _profilePlayer.CurrentState.Value = GameState.Game;
         }
         

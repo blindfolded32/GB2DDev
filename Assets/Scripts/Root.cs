@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-﻿using CommonClasses;
-using Player;
-=======
-﻿using Model.Analytic;
-using Profile;
+using CommonClasses;
+using Model;
+using Model.Analytic;
 using Tools.Ads;
->>>>>>> upstream/Lesson2
 using UnityEngine;
 
 public class Root : MonoBehaviour

@@ -1,16 +1,19 @@
-﻿using Profile;
+﻿using CommonClasses;
 using Tools;
 
-public class ProfilePlayer
+namespace Model
 {
-    public ProfilePlayer(float speedCar)
+    public class ProfilePlayer
     {
-        CurrentState = new SubscriptionProperty<GameState>();
-        CurrentCar = new Car(speedCar);
+        public ProfilePlayer(float speedCar)
+        {
+            CurrentState = new SubscriptionProperty<GameState>();
+            CurrentCar = new Car(speedCar);
+        }
+
+        public SubscriptionProperty<GameState> CurrentState { get; }
+
+        public Car CurrentCar { get; }
     }
-
-    public SubscriptionProperty<GameState> CurrentState { get; }
-
-    public Car CurrentCar { get; }
 }
 

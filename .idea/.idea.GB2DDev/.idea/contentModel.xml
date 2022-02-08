@@ -10,6 +10,7 @@
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
           <e p="BillingMode.json" t="Include" />
+          <e p="IAPProductCatalog.json" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="CommonClasses" t="Include">
@@ -27,6 +28,19 @@
             <e p="InputSwipe.cs" t="Include" />
             <e p="TouchInputView.cs" t="Include" />
           </e>
+          <e p="Model" t="Include">
+            <e p="Analytic" t="Include">
+              <e p="IAnalyticTools.cs" t="Include" />
+              <e p="UnityAnalyticTools.cs" t="Include" />
+            </e>
+            <e p="Car.cs" t="Include" />
+            <e p="ProfilePlayer.cs" t="Include" />
+            <e p="Shop" t="Include">
+              <e p="IShop.cs" t="Include" />
+              <e p="ShopProduct.cs" t="Include" />
+              <e p="ShopTools.cs" t="Include" />
+            </e>
+          </e>
           <e p="Player" t="Include">
             <e p="Car.cs" t="Include" />
             <e p="CarController.cs" t="Include" />
@@ -35,6 +49,10 @@
           </e>
           <e p="Root.cs" t="Include" />
           <e p="Tools" t="Include">
+            <e p="Ads" t="Include">
+              <e p="IAdsShower.cs" t="Include" />
+              <e p="UnityAdsTools.cs" t="Include" />
+            </e>
             <e p="ResourceManagement" t="Include">
               <e p="ResourceLoader.cs" t="Include" />
               <e p="ResourcePath.cs" t="Include" />
@@ -55,6 +73,12 @@
             <e p="Menu" t="Include">
               <e p="MainMenuController.cs" t="Include" />
               <e p="MainMenuView.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UnityPurchasing" t="Include">
+            <e p="generated" t="Include">
+              <e p="AppleTangle.cs" t="Include" />
+              <e p="GooglePlayTangle.cs" t="Include" />
             </e>
           </e>
         </e>

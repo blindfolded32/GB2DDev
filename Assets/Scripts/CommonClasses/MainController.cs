@@ -1,15 +1,18 @@
-﻿using Player;
+﻿using Model;
+using Model.Analytic;
+using Tools.Ads;
 using UI.Menu;
-//using UI.Menu;
 using UnityEngine;
 
 namespace CommonClasses
 {
     public class MainController : BaseController
     {
-        public MainController(Transform placeForUi, ProfilePlayer profilePlayer)
+        public MainController(Transform placeForUi, ProfilePlayer profilePlayer, IAnalyticTools analyticsTools, IAdsShower ads)
         {
             _profilePlayer = profilePlayer;
+            _analyticsTools = analyticsTools;
+            _ads = ads;
             _placeForUi = placeForUi;
             OnChangeGameState(_profilePlayer.CurrentState.Value);
             profilePlayer.CurrentState.SubscribeOnChange(OnChangeGameState);
@@ -19,6 +22,8 @@ namespace CommonClasses
         private GameController _gameController;
         private readonly Transform _placeForUi;
         private readonly ProfilePlayer _profilePlayer;
+        private readonly IAnalyticTools _analyticsTools;
+        private readonly IAdsShower _ads;
 
         protected override void OnDispose()
         {
@@ -33,7 +38,7 @@ namespace CommonClasses
             switch (state)
             {
                 case GameState.Start:
-                    _mainMenuController = new MainMenuController(_placeForUi, _profilePlayer);
+                    _mainMenuController = new MainMenuController(_placeForUi, _profilePlayer, _analyticsTools, _ads);
                     _gameController?.Dispose();
                     break;
                 case GameState.Game:
