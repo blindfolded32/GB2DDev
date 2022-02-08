@@ -29,7 +29,15 @@ UnityConnectSettings:
     m_TestMode: 1
     m_IosGameId: 
     m_AndroidGameId: 
+<<<<<<< HEAD
     m_GameIds: {}
     m_GameId: 
+=======
+    m_GameIds:
+      AndroidPlayer: 4593577
+      iPhonePlayer: 4593576
+      tvOSPlayer: 
+    m_GameId: 4593577
+>>>>>>> upstream/Lesson2
   PerformanceReportingSettings:
     m_Enabled: 0
