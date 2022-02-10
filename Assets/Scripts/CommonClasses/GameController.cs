@@ -1,7 +1,6 @@
-﻿using InputControllers;
+﻿using Model;
 using Player;
 using Tools;
-using ProfilePlayer = Model.ProfilePlayer;
 
 //using Tools.Rx;
 //using UI.BackGround;

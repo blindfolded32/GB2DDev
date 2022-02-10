@@ -3,7 +3,7 @@ using InputControllers;
 using Player;
 using Tools;
 using UnityEngine;
-using Car = Model.Car;
+
 
 public class InputGameController : BaseController
 {

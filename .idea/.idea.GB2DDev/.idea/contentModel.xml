@@ -33,8 +33,6 @@
               <e p="IAnalyticTools.cs" t="Include" />
               <e p="UnityAnalyticTools.cs" t="Include" />
             </e>
-            <e p="Car.cs" t="Include" />
-            <e p="ProfilePlayer.cs" t="Include" />
             <e p="Shop" t="Include">
               <e p="IShop.cs" t="Include" />
               <e p="ShopProduct.cs" t="Include" />
@@ -69,6 +67,10 @@
               <e p="Background.cs" t="Include" />
               <e p="TapeBackgroundController.cs" t="Include" />
               <e p="TapeBackgroundView.cs" t="Include" />
+            </e>
+            <e p="GoldBalance" t="Include">
+              <e p="GoldController.cs" t="Include" />
+              <e p="GoldView.cs" t="Include" />
             </e>
             <e p="Menu" t="Include">
               <e p="MainMenuController.cs" t="Include" />

@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using CommonClasses;
 using Model.Analytic;
+using Model.Shop;
 using Player;
 using Tools.Ads;
+using UI.GoldBalance;
 using UnityEngine;
+using UnityEngine.Purchasing;
 using Object = UnityEngine.Object;
-using ProfilePlayer = Model.ProfilePlayer;
+
 
 namespace UI.Menu
 {
     public class MainMenuController : BaseController
     {
-        private readonly IAnalyticTools _analytics;
+        private readonly IAnalyticTools _analyticsTools;
         private readonly IAdsShower _ads;
-
+        private Action _AdsCompleted;
         
         
         private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/mainMenu"};
@@ -23,12 +26,15 @@ namespace UI.Menu
         private Dictionary<int, GameObject> _trails = new Dictionary<int, GameObject>();
 
         
-        public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer, IAnalyticTools analytics, IAdsShower ads)
+        public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer, IAnalyticTools analytics,
+        Action<GoldView> goldView, Action<IAPButton> iapView, IAdsShower ads)//, ShopTools shopTools)
         {
             _profilePlayer = profilePlayer;
-            _analytics = analytics;
+            _analyticsTools = analytics;
             _ads = ads;
             _view = LoadView(placeForUi);
+            goldView.Invoke(_view.GetComponentInChildren<GoldView>());
+            iapView.Invoke(_view.GetComponentInChildren<IAPButton>());
             _view.Init(StartGame);
             _view.UpdateTouch += OnTouch;
         }
@@ -42,7 +48,7 @@ namespace UI.Menu
 
         private void StartGame()
         {
-            _analytics.SendMessage("Start", new Dictionary<string, object>());
+            _analyticsTools.SendMessage("Start", new Dictionary<string, object>());
             _ads.ShowInterstitial();
             _profilePlayer.CurrentState.Value = GameState.Game;
         }
@@ -78,19 +84,18 @@ namespace UI.Menu
             var trail = _view.CreateTrail(Camera.main.ScreenToWorldPoint(data.position));
             _trails.Add(data.fingerId,trail);
         }
-
         private void RemoveTrail(Touch data)
         {
             _trails.TryGetValue(data.fingerId, out var trail);
             GameObject.Destroy(trail, 1f);
             _trails.Remove(data.fingerId);
         }
-        
         protected override void OnDispose()
         {
             base.OnDispose();
             _view.UpdateTouch -= OnTouch;
         }
+
     }
 }
 

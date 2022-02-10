@@ -7,14 +7,19 @@ using UnityEngine.Purchasing.Security;
 
 namespace Model.Shop
 {
-    internal class ShopTools: IShop, IStoreListener
+    public class ShopTools: IShop, IStoreListener
     {
+        public Action<IAPButton> OnButtonRegister;
+        
         private IStoreController _controller;
         private IExtensionProvider _extensionProvider;
         private bool _isInitialized;
 
         private readonly SubscriptionAction _onSuccessPurchase;
         private readonly SubscriptionAction _onFailedPurchase;
+        
+        public IReadOnlySubscriptionAction OnSuccessPurchase => _onSuccessPurchase;
+        public IReadOnlySubscriptionAction OnFailedPurchase => _onFailedPurchase;
 
         public ShopTools(List<ShopProduct> products)
         {
@@ -27,11 +32,8 @@ namespace Model.Shop
                 builder.AddProduct(product.Id, product.CurrentProductType);
             }
             UnityPurchasing.Initialize(this, builder);
+            OnButtonRegister += AddShopButton;
         }
-
-        public IReadOnlySubscriptionAction OnSuccessPurchase => _onSuccessPurchase;
-        public IReadOnlySubscriptionAction OnFailedPurchase => _onFailedPurchase;
-
         public void Buy(string id)
         {
             if (!_isInitialized)
@@ -107,10 +109,18 @@ namespace Model.Shop
             _extensionProvider.GetExtension<IGooglePlayStoreExtensions>().RestoreTransactions(OnRestoreFinished);
 #endif
         }
-
         private void OnRestoreFinished(bool isSuccess)
         {
 
+        }
+        public void AddShopButton(IAPButton button)
+        {
+            button.onPurchaseFailed.AddListener(OnPurchaseFailed);
+            button.onPurchaseComplete.AddListener(PurchaseComplete);
+        }
+        private void PurchaseComplete(Product product)
+        {
+            _onSuccessPurchase.Invoke();
         }
     }
 }

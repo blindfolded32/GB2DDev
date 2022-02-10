@@ -14,25 +14,31 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputAcceleration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/BaseInputView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CarView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ProfilePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorTrail.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/TouchInputView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputJoystickView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/TouchStruct.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/Swipe.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputSwipe.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputGameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Root.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/ProfilePlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Ads/UnityAdsTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Root.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ProfilePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopProduct.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/IShop.cs" />
       </list>
     </option>
   </component>
@@ -89,7 +95,8 @@
       <workItem from="1644251373644" duration="1282000" />
       <workItem from="1644255389684" duration="8000" />
       <workItem from="1644298403215" duration="360000" />
-      <workItem from="1644309684679" duration="333000" />
+      <workItem from="1644309684679" duration="4718000" />
+      <workItem from="1644471644810" duration="283000" />
     </task>
     <servers />
   </component>
