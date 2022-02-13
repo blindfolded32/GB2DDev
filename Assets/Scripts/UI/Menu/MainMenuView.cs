@@ -1,5 +1,4 @@
 ﻿using System;
-using CommonClasses;
 using JoostenProductions;
 using Unity.Mathematics;
 using UnityEngine;
@@ -14,6 +13,7 @@ namespace UI.Menu
         
         [SerializeField] private Button _buttonStart;
         [SerializeField] private GameObject _trail;
+        //[SerializeField] private Button _RewardButton;
 
         public void Init(UnityAction startGame)
         {
@@ -38,6 +38,11 @@ namespace UI.Menu
         protected void OnDestroy()
         {
             _buttonStart.onClick.RemoveAllListeners();
+     //       _RewardButton.onClick.RemoveAllListeners();
+        }
+        public void DisableRewardButton()
+        {
+          //  _RewardButton.interactable = false;
         }
     }
 }

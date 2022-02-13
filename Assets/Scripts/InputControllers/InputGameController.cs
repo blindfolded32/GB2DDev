@@ -4,6 +4,7 @@ using Player;
 using Tools;
 using UnityEngine;
 
+
 public class InputGameController : BaseController
 {
     public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, Car car)

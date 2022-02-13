@@ -1,7 +1,7 @@
 ﻿using InputControllers;
 using JoostenProductions;
 using Tools;
-using UnityEngine;
+
 //using UnityStandardAssets.CrossPlatformInput;
 
 internal class InputJoystickView : BaseInputView

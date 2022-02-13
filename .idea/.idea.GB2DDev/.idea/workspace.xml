@@ -14,21 +14,31 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputAcceleration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/BaseInputView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CarView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ProfilePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorTrail.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/TouchInputView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputJoystickView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/TouchStruct.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/Swipe.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputSwipe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/ProfilePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Ads/UnityAdsTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Root.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopProduct.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/IShop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ProfilePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldController.cs" />
       </list>
     </option>
   </component>
@@ -60,10 +70,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5832">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5832" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -84,6 +94,10 @@
       <workItem from="1643881318607" duration="1820000" />
       <workItem from="1644251373644" duration="1282000" />
       <workItem from="1644255389684" duration="8000" />
+      <workItem from="1644298403215" duration="360000" />
+      <workItem from="1644309684679" duration="4718000" />
+      <workItem from="1644471644810" duration="283000" />
+      <workItem from="1644752107951" duration="2248000" />
     </task>
     <servers />
   </component>
@@ -94,5 +108,79 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="460" height="464" key="DebuggerActiveHint" timestamp="1644753592219">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="460" height="464" key="DebuggerActiveHint/0.0.2560.1050@0.0.2560.1050" timestamp="1644753592219" />
+    <state width="2517" height="379" key="GridCell.Tab.0.bottom" timestamp="1644752323781">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.0.bottom/0.0.2560.1050@0.0.2560.1050" timestamp="1644752323781" />
+    <state width="2517" height="379" key="GridCell.Tab.0.center" timestamp="1644752323781">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.0.center/0.0.2560.1050@0.0.2560.1050" timestamp="1644752323781" />
+    <state width="2517" height="379" key="GridCell.Tab.0.left" timestamp="1644752323780">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.0.left/0.0.2560.1050@0.0.2560.1050" timestamp="1644752323780" />
+    <state width="2517" height="379" key="GridCell.Tab.0.right" timestamp="1644752323781">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.0.right/0.0.2560.1050@0.0.2560.1050" timestamp="1644752323781" />
+    <state width="2517" height="379" key="GridCell.Tab.1.bottom" timestamp="1644752336676">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.1.bottom/0.0.2560.1050@0.0.2560.1050" timestamp="1644752336676" />
+    <state width="2517" height="379" key="GridCell.Tab.1.center" timestamp="1644752336676">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.1.center/0.0.2560.1050@0.0.2560.1050" timestamp="1644752336676" />
+    <state width="2517" height="379" key="GridCell.Tab.1.left" timestamp="1644752336676">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.1.left/0.0.2560.1050@0.0.2560.1050" timestamp="1644752336676" />
+    <state width="2517" height="379" key="GridCell.Tab.1.right" timestamp="1644752336676">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="379" key="GridCell.Tab.1.right/0.0.2560.1050@0.0.2560.1050" timestamp="1644752336676" />
+    <state x="1813" y="133" width="636" height="272" key="dock-window-1" timestamp="1644752681710">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="1813" y="133" width="636" height="272" key="dock-window-1/0.0.2560.1050@0.0.2560.1050" timestamp="1644752681710" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldView.cs</url>
+          <line>26</line>
+          <properties documentPath="C:\Users\1\Documents\Unity Rep\HW_Terrain\GB2DDev\Assets\Scripts\UI\GoldBalance\GoldView.cs" initialLine="26">
+            <startOffsets>
+              <option value="667" />
+            </startOffsets>
+            <endOffsets>
+              <option value="705" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldController.cs</url>
+          <line>45</line>
+          <properties documentPath="C:\Users\1\Documents\Unity Rep\HW_Terrain\GB2DDev\Assets\Scripts\UI\GoldBalance\GoldController.cs" initialLine="45">
+            <startOffsets>
+              <option value="1256" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1281" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
