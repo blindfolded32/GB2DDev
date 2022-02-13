@@ -7,28 +7,20 @@ namespace UI.GoldBalance
     public class GoldView : MonoBehaviour
     {
         private Text _textContainer;
-        private SubscriptionProperty<int> _goldCountProp;
+        private int _goldCount;
 
-        private string _header;
-        private ushort _goldCount;
+        private const string _header="Gold:";
         private void Awake()
         {
+            _goldCount = 10;
             _textContainer = gameObject.GetComponent<Text>();
+            Init(_goldCount);
         }
-        public void Init(string header, SubscriptionProperty<int> goldCount)
+        public void Init(int goldCount)
         {
-            _header = header;
-            _goldCountProp = goldCount;
-            _goldCountProp.SubscribeOnChange(OnGoldChange);
-            _textContainer.text = _header + goldCount.Value;
-        }
-        private void OnGoldChange(int count)
-        {
-            _textContainer.text = _header + count;
-        }
-        private void OnDestroy()
-        {
-            _goldCountProp.UnSubscriptionOnChange(OnGoldChange);
+           // _header = header;
+            _goldCount += goldCount;
+            _textContainer.text = _header + _goldCount;
         }
     }
 }

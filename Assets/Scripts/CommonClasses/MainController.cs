@@ -27,6 +27,7 @@ namespace CommonClasses
             _profilePlayer = profilePlayer;
             _analyticsTools = analyticsTools;
             _shopTools = shopTools;
+            _goldController = new GoldController(profilePlayer, _shopTools);
             _ads = ads;
             _placeForUi = placeForUi;
             OnChangeGameState(_profilePlayer.CurrentState.Value);

@@ -351,6 +351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _placeForUi: {fileID: 693758133}
+  _products:
+  - Id: 1
+    CurrentProductType: 0
   _ads: {fileID: 1002511162}
 --- !u!4 &1002511161
 Transform:

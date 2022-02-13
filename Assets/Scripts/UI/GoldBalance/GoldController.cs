@@ -44,6 +44,7 @@ namespace UI.GoldBalance
         private void SuccessfullPurchase()
         {
             OnGoldChange?.Invoke(10);
+            _view.Init(10);
         }
         protected override void OnDispose()
         {

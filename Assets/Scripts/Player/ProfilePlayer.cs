@@ -15,7 +15,7 @@ namespace Player
             CurrentState = new SubscriptionProperty<GameState>();
             CurrentCar = new Car(speedCar);
             CurrentGold = new SubscriptionProperty<int>();
-            CurrentGold.Value = 0;
+            CurrentGold.Value = 10;
         }
         public void PurchaseGold(GoldController goldController)
         {
