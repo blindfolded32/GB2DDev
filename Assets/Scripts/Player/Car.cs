@@ -1,8 +1,12 @@
 ﻿namespace Player
 {
-    public class Car
+    public class Car : IUpgradeableCar
     {
-        public float Speed { get;}
+        public float Speed { get; set; }
+        public void Restore()
+        {
+            throw new System.NotImplementedException();
+        }
 
         public Car(float speed)
         {

@@ -13,6 +13,7 @@
           <e p="IAPProductCatalog.json" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="BaseController.cs" t="Include" />
           <e p="CommonClasses" t="Include">
             <e p="BaseController.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
@@ -20,6 +21,21 @@
             <e p="MainController.cs" t="Include" />
             <e p="Swipe.cs" t="Include" />
           </e>
+          <e p="Data" t="Include">
+            <e p="AbilitiesCollectionViewStub.cs" t="Include" />
+            <e p="AbilitiesController.cs" t="Include" />
+            <e p="AbilityItemConfig.cs" t="Include" />
+            <e p="AbilityRepository.cs" t="Include" />
+            <e p="AbilityType.cs" t="Include" />
+            <e p="IAbility.cs" t="Include" />
+            <e p="IAbilityActivator.cs" t="Include" />
+            <e p="IAbilityCollectionView.cs" t="Include" />
+            <e p="IAbilityRepository.cs" t="Include" />
+            <e p="ItemConfig.cs" t="Include" />
+            <e p="UpgradeItemConfig.cs" t="Include" />
+            <e p="UpgradeItemConfigDataSource.cs" t="Include" />
+          </e>
+          <e p="GunAbility.cs" t="Include" />
           <e p="InputControllers" t="Include">
             <e p="BaseInputView.cs" t="Include" />
             <e p="InputAcceleration.cs" t="Include" />
@@ -28,16 +44,38 @@
             <e p="InputSwipe.cs" t="Include" />
             <e p="TouchInputView.cs" t="Include" />
           </e>
+          <e p="Inventory" t="Include">
+            <e p="IInventoryController.cs" t="Include" />
+            <e p="IInventoryModel.cs" t="Include" />
+            <e p="IInventoryView.cs" t="Include" />
+            <e p="InventoryController.cs" t="Include" />
+            <e p="InventoryModel.cs" t="Include" />
+            <e p="InventoryView.cs" t="Include" />
+          </e>
+          <e p="Item" t="Include">
+            <e p="IItem.cs" t="Include" />
+            <e p="IItemsRepository.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="ItemInfo.cs" t="Include" />
+            <e p="ItemsRepository.cs" t="Include" />
+          </e>
           <e p="Model" t="Include">
             <e p="Analytic" t="Include">
               <e p="IAnalyticTools.cs" t="Include" />
               <e p="UnityAnalyticTools.cs" t="Include" />
             </e>
+            <e p="Car.cs" t="Include" />
+            <e p="IUpgradeableCar.cs" t="Include" />
+            <e p="IUpgradeCarHandler.cs" t="Include" />
+            <e p="ShedController.cs" t="Include" />
             <e p="Shop" t="Include">
               <e p="IShop.cs" t="Include" />
               <e p="ShopProduct.cs" t="Include" />
               <e p="ShopTools.cs" t="Include" />
             </e>
+            <e p="SpeedUpgradeHandler.cs" t="Include" />
+            <e p="UpgradeHandelrStub.cs" t="Include" />
+            <e p="UpgradeHandlerRepository.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Car.cs" t="Include" />

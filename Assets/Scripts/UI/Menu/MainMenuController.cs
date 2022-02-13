@@ -19,7 +19,6 @@ namespace UI.Menu
         private readonly IAdsShower _ads;
         private Action _AdsCompleted;
         
-        
         private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/mainMenu"};
         private readonly ProfilePlayer _profilePlayer;
         private readonly MainMenuView _view;
@@ -27,7 +26,7 @@ namespace UI.Menu
 
         
         public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer, IAnalyticTools analytics,
-        Action<GoldView> goldView, Action<IAPButton> iapView, IAdsShower ads)//, ShopTools shopTools)
+        Action<GoldView> goldView, Action<IAPButton> iapView, IAdsShower ads)
         {
             _profilePlayer = profilePlayer;
             _analyticsTools = analytics;
@@ -38,14 +37,12 @@ namespace UI.Menu
             _view.Init(StartGame);
             _view.UpdateTouch += OnTouch;
         }
-
         private MainMenuView LoadView(Transform placeForUi)
         {
             var objectView = Object.Instantiate(ResourceLoader.LoadPrefab(_viewPath), placeForUi, false);
             AddGameObjects(objectView);
             return objectView.GetComponent<MainMenuView>();
         }
-
         private void StartGame()
         {
             _analyticsTools.SendMessage("Start", new Dictionary<string, object>());
