@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-public interface IAbilityRepository
+namespace Data
 {
-    IReadOnlyDictionary<int, IAbility> AbilitiesMap { get; }
+    public interface IAbilityRepository
+    {
+        IReadOnlyDictionary<int, IAbility> AbilitiesMap { get; }
+    }
 }

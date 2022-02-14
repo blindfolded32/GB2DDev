@@ -1,4 +1,6 @@
-﻿public class SpeedUpgradeHandler : IUpgradeCarHandler
+﻿using Data;
+
+public class SpeedUpgradeHandler : IUpgradeCarHandler
 {
     private readonly UpgradeItemConfig _config;
 

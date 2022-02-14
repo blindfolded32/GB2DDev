@@ -1,24 +1,28 @@
 ﻿using System.Collections.Generic;
+using Data;
 
-public class InventoryController : BaseController, IInventoryController
+namespace Inventory
 {
-    private readonly IInventoryModel _inventoryModel;
-    private readonly IInventoryView _inventoryView;
-    private readonly IItemsRepository _itemsRepository;
-
-    public InventoryController(List<ItemConfig> itemConfigs, InventoryModel inventoryModel)
+    public class InventoryController : BaseController, IInventoryController
     {
-        _inventoryModel = inventoryModel;
-        _inventoryView = new InventoryView();
-        _itemsRepository = new ItemsRepository(itemConfigs);
-    }
+        private readonly IInventoryModel _inventoryModel;
+        private readonly IInventoryView _inventoryView;
+        private readonly IItemsRepository _itemsRepository;
 
-    public void ShowInventory()
-    {
-        foreach (var item in _itemsRepository.Items.Values)
-            _inventoryModel.EquipItem(item);
+        public InventoryController(List<ItemConfig> itemConfigs, InventoryModel inventoryModel)
+        {
+            _inventoryModel = inventoryModel;
+            _inventoryView = new InventoryView();
+            _itemsRepository = new ItemsRepository(itemConfigs);
+        }
 
-        var equippedItems = _inventoryModel.GetEquippedItems();
-        _inventoryView.Display(equippedItems);
+        public void ShowInventory()
+        {
+            foreach (var item in _itemsRepository.Items.Values)
+                _inventoryModel.EquipItem(item);
+
+            var equippedItems = _inventoryModel.GetEquippedItems();
+            _inventoryView.Display(equippedItems);
+        }
     }
 }

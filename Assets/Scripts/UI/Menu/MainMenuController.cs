@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using CommonClasses;
 using Model.Analytic;
-using Model.Shop;
 using Player;
 using Tools.Ads;
 using UI.GoldBalance;

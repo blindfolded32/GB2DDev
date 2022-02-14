@@ -1,4 +1,4 @@
-﻿using CommonClasses;
+﻿using Data;
 using UnityEngine;
 
 namespace Player

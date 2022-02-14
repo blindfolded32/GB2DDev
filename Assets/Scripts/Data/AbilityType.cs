@@ -1,7 +1,10 @@
-﻿public enum AbilityType
+﻿namespace Data
 {
-    None, 
-    Gun,
-    Speed,
-    Oil
+    public enum AbilityType
+    {
+        None, 
+        Gun,
+        Speed,
+        Oil
+    }
 }

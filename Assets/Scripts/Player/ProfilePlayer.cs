@@ -3,7 +3,6 @@ using Model.Analytic;
 using Tools;
 using Tools.Ads;
 using UI.GoldBalance;
-using UnityEngine;
 
 namespace Player
 {

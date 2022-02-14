@@ -29,7 +29,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Ads/UnityAdsTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopProduct.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/IShop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldView.cs" />
@@ -40,10 +39,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BackGround/TapeBackgroundController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/ShedController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Root.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityItemConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/ItemConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/ShedController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/GunAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Abilities/SpeedAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Car.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +113,7 @@
       <workItem from="1644309684679" duration="4718000" />
       <workItem from="1644471644810" duration="283000" />
       <workItem from="1644752107951" duration="5980000" />
+      <workItem from="1644853908236" duration="1662000" />
     </task>
     <servers />
   </component>
@@ -215,13 +224,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Root.cs</url>
-          <line>28</line>
+          <line>29</line>
           <properties documentPath="C:\Users\1\Documents\Unity Rep\HW_Terrain\GB2DDev\Assets\Scripts\Root.cs" initialLine="28">
             <startOffsets>
-              <option value="868" />
+              <option value="880" />
             </startOffsets>
             <endOffsets>
-              <option value="1038" />
+              <option value="1050" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />

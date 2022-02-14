@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public interface IAbilityCollectionView
+namespace Data
 {
-    event EventHandler<IItem> UseRequested;
-    void Display(IReadOnlyList<IItem> abilityItems);
+    public interface IAbilityCollectionView
+    {
+        event EventHandler<IItem> UseRequested;
+        void Display(IReadOnlyList<IItem> abilityItems);
+    }
 }

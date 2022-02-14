@@ -35,7 +35,6 @@
             <e p="UpgradeItemConfig.cs" t="Include" />
             <e p="UpgradeItemConfigDataSource.cs" t="Include" />
           </e>
-          <e p="GunAbility.cs" t="Include" />
           <e p="InputControllers" t="Include">
             <e p="BaseInputView.cs" t="Include" />
             <e p="InputAcceleration.cs" t="Include" />
@@ -78,6 +77,10 @@
             <e p="UpgradeHandlerRepository.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="Abilities" t="Include">
+              <e p="GunAbility.cs" t="Include" />
+              <e p="SpeedAbility.cs" t="Include" />
+            </e>
             <e p="Car.cs" t="Include" />
             <e p="CarController.cs" t="Include" />
             <e p="CarView.cs" t="Include" />
