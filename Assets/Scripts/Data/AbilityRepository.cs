@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Player;
+using UnityEngine.Events;
 
 namespace Data
 {
@@ -9,9 +10,12 @@ namespace Data
         public IReadOnlyDictionary<int, IAbility> AbilitiesMap { get => _abilitiesMap; }
 
         private Dictionary<int, IAbility> _abilitiesMap = new Dictionary<int, IAbility>();
+        private readonly Action<float> _abilityListener;
 
-        public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities)
+        public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities, Action<float> abilityListener)
         {
+            _abilityListener = abilityListener;
+
             foreach (var config in abilities)
             {
                 _abilitiesMap[config.Id] = CreateAbility(config);
@@ -29,8 +33,7 @@ namespace Data
                 case AbilityType.Speed:
                     return new SpeedAbility(config.View, config.value);
                 case AbilityType.Oil:
-                    throw new ArgumentOutOfRangeException();
-                    break;
+                    return new OilAbility(config.View);
                 default:
                     throw new ArgumentOutOfRangeException();
             }

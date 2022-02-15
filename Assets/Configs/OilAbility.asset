@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 148e224ffa39c9744b6b0d16fd5f2327, type: 3}
-  m_Name: AbilityItem
+  m_Name: OilAbility
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: f7ebc477c8f8e884d99be514218aebac, type: 2}
-  View: {fileID: 0}
+  View: {fileID: 7119560399492931356, guid: 5646d4e40532adf46b28d294eeae2ac9, type: 3}
   Type: 3
   value: 1

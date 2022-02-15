@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Data;
 using Inventory;
+using Item;
 using UnityEngine;
 
 namespace Model
@@ -11,17 +12,27 @@ namespace Model
         private readonly IUpgradeableCar _car;
         private readonly UpgradeHandlerRepository _upgradeRepository;
         private readonly InventoryController _inventoryController;
-        private readonly InventoryModel _model;
+        private readonly IInventoryModel _inventoryModel;
+        
+        private readonly Transform _uiTransform;
+  
+        private readonly ResourcePath _shedUIPrefabPath = new ResourcePath() { PathResource = "Prefabs/Inventory"};
+        private readonly ResourcePath _shedItemPrefabPath = new ResourcePath() { PathResource = "Prefabs/InventoryItem"};
 
-        public ShedController(IReadOnlyList<UpgradeItemConfig> upgradeItems, List<ItemConfig> items, IUpgradeableCar car)
+        public ShedController(IInventoryModel inventoryModel, IReadOnlyList<UpgradeItemConfig> upgradeItems, List<ItemConfig> items, IUpgradeableCar car, Transform uiTransform)
         {
             _upgradeItems = upgradeItems;
             _car = car;
-            _upgradeRepository = new UpgradeHandlerRepository(upgradeItems);
+            _inventoryModel = inventoryModel;//new InventoryModel();
+           
+            _inventoryModel.IsInShed = true; 
+            _uiTransform = uiTransform;
+           // _upgradeRepository = new UpgradeHandlerRepository(upgradeItems);
 
-            _model = new InventoryModel();
+        
             AddController(_upgradeRepository);
-            _inventoryController = new InventoryController(items, _model);
+            _inventoryController = new InventoryController(items, _inventoryModel);
+            _inventoryController.InitShedUI(_uiTransform, _shedUIPrefabPath, _shedItemPrefabPath);
             AddController(_inventoryController);
         }
 
@@ -30,10 +41,15 @@ namespace Model
             _inventoryController.ShowInventory();
             Debug.Log($"Enter, car speed = {_car.Speed}");
         }
-
+        protected override void OnDispose()
+        {
+            _inventoryModel.IsInShed = false;
+            _upgradeRepository?.Dispose();
+            _inventoryController?.Dispose();
+        }
         public void Exit()
         {
-            UpgradeCarWithEquipedItems(_car, _model.GetEquippedItems(), _upgradeRepository.UpgradeItems);
+            UpgradeCarWithEquipedItems(_car, _inventoryModel.GetEquippedItems(), _upgradeRepository.UpgradeItems);
             Debug.Log($"Exit, car speed = {_car.Speed}");
         }
 

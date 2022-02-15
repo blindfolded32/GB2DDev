@@ -12,6 +12,11 @@
         {
             Speed = speed;
         }
+        
+        public void AbilityListener(float speed)
+        {
+            Speed += speed;
+        }
     }
 }
 

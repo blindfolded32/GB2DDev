@@ -13,9 +13,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputAcceleration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/BaseInputView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CarView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorTrail.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/TouchInputView.cs" />
@@ -39,19 +36,34 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BackGround/TapeBackgroundController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Root.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityItemConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/ItemConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopTools.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/ShedController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/GunAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Abilities/SpeedAbility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityRepository.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Car.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Abilities/OilAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/IInventoryItemView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/IInventoryView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/IInventoryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/IInventoryModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item/ItemInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item/IItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/ItemConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item/ItemsRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/ShedController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityGroupView.cs" />
       </list>
     </option>
   </component>
@@ -113,7 +125,8 @@
       <workItem from="1644309684679" duration="4718000" />
       <workItem from="1644471644810" duration="283000" />
       <workItem from="1644752107951" duration="5980000" />
-      <workItem from="1644853908236" duration="1662000" />
+      <workItem from="1644853908236" duration="3009000" />
+      <workItem from="1644946513546" duration="1971000" />
     </task>
     <servers />
   </component>
@@ -210,14 +223,18 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1813" y="133" width="620" height="204" key="GridCell.Tab.4.right/0.0.2560.1050@0.0.2560.1050" timestamp="1644756029401" />
-    <state x="1108" y="210" key="RiderGenerateDialog" timestamp="1644756725900">
+    <state x="1108" y="210" key="RiderGenerateDialog" timestamp="1644947216170">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="1108" y="210" key="RiderGenerateDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1644756725900" />
+    <state x="1108" y="210" key="RiderGenerateDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1644947216170" />
     <state x="1813" y="133" width="636" height="272" key="dock-window-1" timestamp="1644752681710">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1813" y="133" width="636" height="272" key="dock-window-1/0.0.2560.1050@0.0.2560.1050" timestamp="1644752681710" />
+    <state x="943" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1644947624547">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="943" y="227" width="672" height="678" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1644947624547" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,11 @@
-﻿public struct ItemInfo
-{
-    public string Title { get; set; }
+﻿using UnityEngine;
 
-    public string Description { get; set; }
+namespace Item
+{
+    public struct ItemInfo
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public Sprite ItemIcon { get; set; }
+    }
 }

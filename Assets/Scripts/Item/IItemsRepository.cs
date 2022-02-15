@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-public interface IItemsRepository
+namespace Item
 {
-    IReadOnlyDictionary<int, IItem> Items { get; }
+    public interface IItemsRepository
+    {
+        IReadOnlyDictionary<int, IItem> Items { get; }
+    }
 }

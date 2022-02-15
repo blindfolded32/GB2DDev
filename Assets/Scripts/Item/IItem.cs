@@ -1,5 +1,11 @@
-﻿public interface IItem
+﻿using UnityEngine;
+
+namespace Item
 {
-    int Id { get; set; }
-    ItemInfo Info { get; set; }
+    public interface IItem
+    {
+        int Id { get; set; }
+        ItemInfo Info { get; set; }
+        Sprite ItemIcon { get; }
+    }
 }

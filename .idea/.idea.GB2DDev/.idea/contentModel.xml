@@ -24,9 +24,11 @@
           <e p="Data" t="Include">
             <e p="AbilitiesCollectionViewStub.cs" t="Include" />
             <e p="AbilitiesController.cs" t="Include" />
+            <e p="AbilityGroupView.cs" t="Include" />
             <e p="AbilityItemConfig.cs" t="Include" />
             <e p="AbilityRepository.cs" t="Include" />
             <e p="AbilityType.cs" t="Include" />
+            <e p="AbilityView.cs" t="Include" />
             <e p="IAbility.cs" t="Include" />
             <e p="IAbilityActivator.cs" t="Include" />
             <e p="IAbilityCollectionView.cs" t="Include" />
@@ -43,14 +45,6 @@
             <e p="InputSwipe.cs" t="Include" />
             <e p="TouchInputView.cs" t="Include" />
           </e>
-          <e p="Inventory" t="Include">
-            <e p="IInventoryController.cs" t="Include" />
-            <e p="IInventoryModel.cs" t="Include" />
-            <e p="IInventoryView.cs" t="Include" />
-            <e p="InventoryController.cs" t="Include" />
-            <e p="InventoryModel.cs" t="Include" />
-            <e p="InventoryView.cs" t="Include" />
-          </e>
           <e p="Item" t="Include">
             <e p="IItem.cs" t="Include" />
             <e p="IItemsRepository.cs" t="Include" />
@@ -63,7 +57,6 @@
               <e p="IAnalyticTools.cs" t="Include" />
               <e p="UnityAnalyticTools.cs" t="Include" />
             </e>
-            <e p="Car.cs" t="Include" />
             <e p="IUpgradeableCar.cs" t="Include" />
             <e p="IUpgradeCarHandler.cs" t="Include" />
             <e p="ShedController.cs" t="Include" />
@@ -79,6 +72,7 @@
           <e p="Player" t="Include">
             <e p="Abilities" t="Include">
               <e p="GunAbility.cs" t="Include" />
+              <e p="OilAbility.cs" t="Include" />
               <e p="SpeedAbility.cs" t="Include" />
             </e>
             <e p="Car.cs" t="Include" />
@@ -112,6 +106,15 @@
             <e p="GoldBalance" t="Include">
               <e p="GoldController.cs" t="Include" />
               <e p="GoldView.cs" t="Include" />
+            </e>
+            <e p="Inventory" t="Include">
+              <e p="IInventoryController.cs" t="Include" />
+              <e p="IInventoryItemView.cs" t="Include" />
+              <e p="IInventoryModel.cs" t="Include" />
+              <e p="IInventoryView.cs" t="Include" />
+              <e p="InventoryController.cs" t="Include" />
+              <e p="InventoryModel.cs" t="Include" />
+              <e p="InventoryView.cs" t="Include" />
             </e>
             <e p="Menu" t="Include">
               <e p="MainMenuController.cs" t="Include" />

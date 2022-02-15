@@ -29,6 +29,8 @@ namespace CommonClasses
         private readonly IReadOnlyList<UpgradeItemConfig> _upgradeItems;
         private readonly IReadOnlyList<AbilityItemConfig> _abilityItems;
         private InventoryController _inventoryController;
+
+        private InventoryModel _inventoryModel;
         
         public MainController(Transform placeForUi, ProfilePlayer profilePlayer, IAnalyticTools analyticsTools, 
             IAdsShower ads, ShopTools shopTools, List<ItemConfig> itemsConfig, IReadOnlyList<UpgradeItemConfig> upgradeItems,
@@ -42,6 +44,7 @@ namespace CommonClasses
             _placeForUi = placeForUi;
             OnChangeGameState(_profilePlayer.CurrentState.Value);
             profilePlayer.CurrentState.SubscribeOnChange(OnChangeGameState);
+            _inventoryModel = new InventoryModel();
             
             _itemsConfig = itemsConfig;
             _upgradeItems = upgradeItems;
@@ -65,19 +68,21 @@ namespace CommonClasses
                     _mainMenuController = new MainMenuController(_placeForUi, _profilePlayer, _analyticsTools, 
                         _goldController.OnViewLoaded, _shopTools.OnButtonRegister, _ads);
                     _analyticsTools.SendMessage("Launched");
-                    _shedController = new ShedController(_upgradeItems, _itemsConfig, _profilePlayer.CurrentCar);
+                  //  _shedController = new ShedController(_upgradeItems, _itemsConfig, _profilePlayer.CurrentCar);
+                    _shedController = new ShedController(_inventoryModel, _upgradeItems, _itemsConfig, _profilePlayer.CurrentCar, _placeForUi);
                     _shedController.Enter();
                     _shedController.Exit();
                     _inventoryController?.Dispose();
                     _gameController?.Dispose();
                     break;
                 case GameState.Game:
-                    
+                    _shedController?.Dispose();
                     _analyticsTools.SendMessage("Started");
-                    var inventoryModel = new InventoryModel();
-                    _inventoryController = new InventoryController(_itemsConfig, inventoryModel);
+                 
+                    _inventoryController = new InventoryController(_itemsConfig, _inventoryModel);
                     _inventoryController.ShowInventory();
-                    _gameController = new GameController(_profilePlayer,_abilityItems, inventoryModel);
+                   // _gameController = new GameController(_profilePlayer,_abilityItems, _inventoryModel);
+                    _gameController = new GameController(_profilePlayer, _abilityItems, _inventoryModel, _placeForUi);
                     _mainMenuController?.Dispose();
                     break;
                 default:
