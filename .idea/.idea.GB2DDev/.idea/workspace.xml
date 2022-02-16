@@ -13,10 +13,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/CarView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/CursorTrail.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/TouchInputView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputJoystickView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/TouchStruct.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/Swipe.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputSwipe.cs" />
@@ -31,7 +27,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GoldBalance/GoldView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MainMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputControllers/InputGameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Car.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ProfilePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BackGround/TapeBackgroundController.cs" />
@@ -42,9 +37,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Shop/ShopTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/GunAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Abilities/SpeedAbility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Car.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Abilities/OilAbility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityRepository.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/IInventoryItemView.cs" />
@@ -61,9 +54,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/ShedController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityGroupView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Car.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/IUpgradeableCar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/AbilityRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Car.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommonClasses/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/UpgradeHandlerRepository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Prefabs/AbilitiesGroupView.prefab" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Prefabs/Ability.prefab" />
       </list>
     </option>
   </component>
@@ -126,7 +126,7 @@
       <workItem from="1644471644810" duration="283000" />
       <workItem from="1644752107951" duration="5980000" />
       <workItem from="1644853908236" duration="3009000" />
-      <workItem from="1644946513546" duration="1971000" />
+      <workItem from="1644946513546" duration="3289000" />
     </task>
     <servers />
   </component>

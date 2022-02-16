@@ -27,13 +27,13 @@ public class UpgradeHandlerRepository : BaseController
         {
             case UpgradeType.None:
                 return UpgradeHandelrStub.Default;
-                break;
+       
             case UpgradeType.Speed:
                 return new SpeedUpgradeHandler(config);
-                break;
+            
             case UpgradeType.Control:
                 return UpgradeHandelrStub.Default;
-                break;
+          
             default:
                 throw new ArgumentOutOfRangeException();
         }

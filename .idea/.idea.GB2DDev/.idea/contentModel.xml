@@ -59,7 +59,6 @@
             </e>
             <e p="IUpgradeableCar.cs" t="Include" />
             <e p="IUpgradeCarHandler.cs" t="Include" />
-            <e p="ShedController.cs" t="Include" />
             <e p="Shop" t="Include">
               <e p="IShop.cs" t="Include" />
               <e p="ShopProduct.cs" t="Include" />
@@ -119,6 +118,9 @@
             <e p="Menu" t="Include">
               <e p="MainMenuController.cs" t="Include" />
               <e p="MainMenuView.cs" t="Include" />
+            </e>
+            <e p="Shed" t="Include">
+              <e p="ShedController.cs" t="Include" />
             </e>
           </e>
           <e p="UnityPurchasing" t="Include">
