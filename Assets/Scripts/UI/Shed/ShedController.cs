@@ -25,7 +25,7 @@ namespace Model
             _car = car;
             _inventoryModel = inventoryModel;//new InventoryModel();
             _uiTransform = uiTransform;
-           // _upgradeRepository = new UpgradeHandlerRepository(upgradeItems);
+            _upgradeRepository = new UpgradeHandlerRepository(upgradeItems);
 
         
             AddController(_upgradeRepository);

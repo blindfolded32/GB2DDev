@@ -8,7 +8,7 @@ namespace Player
 {
     public class SpeedAbility : IAbility
     {
-        private readonly Sprite _viewPrefab;
+        private readonly SpriteRenderer _viewPrefab;
         private readonly float _boostSpeed;
 
         public Action<float> OnSpeedBoost;
@@ -17,8 +17,8 @@ namespace Player
             [NotNull] GameObject viewPrefab,
             float boostSpeed)
         {
-            _viewPrefab = viewPrefab.GetComponent<Sprite>();
-            if (_viewPrefab == null) throw new InvalidOperationException($"{nameof(SpeedAbility)} view requires {nameof(Sprite)} component!");
+            _viewPrefab = viewPrefab.GetComponent<SpriteRenderer>();
+            if (_viewPrefab == null) throw new InvalidOperationException($"{nameof(SpeedAbility)} view requires {nameof(SpriteRenderer)} component!");
             _boostSpeed = boostSpeed;
         }
 

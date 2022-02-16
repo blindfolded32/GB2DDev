@@ -76,14 +76,13 @@ namespace CommonClasses
                     _gameController?.Dispose();
                     break;
                 case GameState.Game:
-                   
+                    _shedController?.Dispose();
                     _analyticsTools.SendMessage("Started");
-                    _inventoryController = new InventoryController(_itemsConfig, _inventoryModel);
-                    _inventoryController.ShowInventory();
+                   // _inventoryController = new InventoryController(_itemsConfig, _inventoryModel);
+                   // _inventoryController.ShowInventory();
                    // _gameController = new GameController(_profilePlayer,_abilityItems, _inventoryModel);
                     _gameController = new GameController(_profilePlayer, _abilityItems, _inventoryModel, _placeForUi);
                     _mainMenuController?.Dispose();
-                    _shedController?.Dispose();
                     break;
                 default:
                     AllClear();

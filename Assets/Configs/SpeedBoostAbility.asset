@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpeedBoostAbility
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: f1408ac6f4d7115458ef7da08500057a, type: 2}
-  View: {fileID: 0}
+  View: {fileID: 3633305383468800499, guid: b63e44c09847da34c97ca98bc771ad3f, type: 3}
   Type: 2
   value: 3
