@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Data;
-using Inventory;
 using Item;
+using UI.Inventory;
 using UnityEngine;
 
 namespace Model
@@ -24,8 +24,6 @@ namespace Model
             _upgradeItems = upgradeItems;
             _car = car;
             _inventoryModel = inventoryModel;//new InventoryModel();
-           
-            _inventoryModel.IsInShed = true; 
             _uiTransform = uiTransform;
            // _upgradeRepository = new UpgradeHandlerRepository(upgradeItems);
 
@@ -39,18 +37,15 @@ namespace Model
         public void Enter()
         {
             _inventoryController.ShowInventory();
-            Debug.Log($"Enter, car speed = {_car.Speed}");
         }
         protected override void OnDispose()
         {
-            _inventoryModel.IsInShed = false;
             _upgradeRepository?.Dispose();
             _inventoryController?.Dispose();
         }
         public void Exit()
         {
             UpgradeCarWithEquipedItems(_car, _inventoryModel.GetEquippedItems(), _upgradeRepository.UpgradeItems);
-            Debug.Log($"Exit, car speed = {_car.Speed}");
         }
 
         private void UpgradeCarWithEquipedItems(IUpgradeableCar car,

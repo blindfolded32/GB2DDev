@@ -4,6 +4,7 @@ using InputControllers;
 using Player;
 using Tools;
 using UI.BackGround;
+using UI.Inventory;
 using UnityEngine;
 
 namespace CommonClasses
@@ -32,8 +33,7 @@ namespace CommonClasses
             var abilitiesController = new AbilitiesController(carController, inventoryModel, abilityRepository,
                 abilityGroupView);
                 //  new AbilitiesCollectionViewStub());
-            
-            AddController(abilitiesController);
+                AddController(abilitiesController);
 
         }
     }

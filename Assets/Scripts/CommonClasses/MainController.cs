@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Data;
-using Inventory;
 using Model;
 using Model.Analytic;
 using Model.Shop;
 using Player;
 using Tools.Ads;
 using UI.GoldBalance;
+using UI.Inventory;
 using UI.Menu;
 using UnityEngine;
 
@@ -45,7 +45,6 @@ namespace CommonClasses
             OnChangeGameState(_profilePlayer.CurrentState.Value);
             profilePlayer.CurrentState.SubscribeOnChange(OnChangeGameState);
             _inventoryModel = new InventoryModel();
-            
             _itemsConfig = itemsConfig;
             _upgradeItems = upgradeItems;
             _abilityItems = abilityItems;
@@ -56,6 +55,7 @@ namespace CommonClasses
             _gameController?.Dispose();
             _profilePlayer.CurrentState.UnSubscriptionOnChange(OnChangeGameState);
             _goldController?.Dispose();
+            _shedController?.Dispose();
             base.OnDispose();
 
         }
@@ -76,14 +76,14 @@ namespace CommonClasses
                     _gameController?.Dispose();
                     break;
                 case GameState.Game:
-                    _shedController?.Dispose();
+                   
                     _analyticsTools.SendMessage("Started");
-                 
                     _inventoryController = new InventoryController(_itemsConfig, _inventoryModel);
                     _inventoryController.ShowInventory();
                    // _gameController = new GameController(_profilePlayer,_abilityItems, _inventoryModel);
                     _gameController = new GameController(_profilePlayer, _abilityItems, _inventoryModel, _placeForUi);
                     _mainMenuController?.Dispose();
+                    _shedController?.Dispose();
                     break;
                 default:
                     AllClear();

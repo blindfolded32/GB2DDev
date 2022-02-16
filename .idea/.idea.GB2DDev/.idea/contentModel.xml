@@ -112,6 +112,7 @@
               <e p="IInventoryModel.cs" t="Include" />
               <e p="IInventoryView.cs" t="Include" />
               <e p="InventoryController.cs" t="Include" />
+              <e p="InventoryItemView.cs" t="Include" />
               <e p="InventoryModel.cs" t="Include" />
               <e p="InventoryView.cs" t="Include" />
             </e>

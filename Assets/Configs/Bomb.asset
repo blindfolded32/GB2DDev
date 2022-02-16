@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: febc8d8cf076e9541a8fe529559269b5, type: 3}
-  m_Name: UpgradeItemConfigDataSource
+  m_Script: {fileID: 11500000, guid: 148e224ffa39c9744b6b0d16fd5f2327, type: 3}
+  m_Name: Bomb
   m_EditorClassIdentifier: 
-  _itemConfigs: []
+  Item: {fileID: 11400000, guid: 2c3226136635bbb4790940f8425cd8a8, type: 2}
+  View: {fileID: 4053592497838757858, guid: 44eb27282cac35e4bbc56d3fd9cc795e, type: 3}
+  Type: 1
+  value: 3

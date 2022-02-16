@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using Data;
 using Item;
-using UI.Inventory;
 using UnityEngine;
 
-namespace Inventory
+namespace UI.Inventory
 {
     public class InventoryController : BaseController, IInventoryController
     {
@@ -30,17 +29,7 @@ namespace Inventory
 
         public void ShowInventory()
         {
-            if (!_inventoryModel.IsInShed)
-            {
-                foreach (var equipedItem in _inventoryModel.GetEquippedItems())
-                {
-                    Debug.Log(equipedItem.Info.Title);
-                }
-            }
-            else
-            {
-                _inventoryView.Show();
-            }
+            _inventoryView.Show();
         }
         
         private void OnItemToggleChanged(IItem item, bool isOn)

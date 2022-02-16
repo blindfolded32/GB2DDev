@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GunAbility
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: b818a32310794344fafbe3b727d53027, type: 2}
-  View: {fileID: 3633305383468800499, guid: b63e44c09847da34c97ca98bc771ad3f, type: 3}
+  View: {fileID: 4053592497838757858, guid: 44eb27282cac35e4bbc56d3fd9cc795e, type: 3}
   Type: 1
   value: 3

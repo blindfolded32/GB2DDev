@@ -1,6 +1,7 @@
 ﻿using System;
 using Item;
 using JetBrains.Annotations;
+using UI.Inventory;
 
 namespace Data
 {

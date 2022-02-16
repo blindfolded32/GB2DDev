@@ -1,5 +1,8 @@
-﻿public interface IInventoryController
+﻿namespace UI.Inventory
 {
-    void InitShedUI(UnityEngine.Transform placeForUI, ResourcePath layoutPrefabPath, ResourcePath itemPrefabPath);
-    void ShowInventory();
+    public interface IInventoryController
+    {
+        void InitShedUI(UnityEngine.Transform placeForUI, ResourcePath layoutPrefabPath, ResourcePath itemPrefabPath);
+        void ShowInventory();
+    }
 }
