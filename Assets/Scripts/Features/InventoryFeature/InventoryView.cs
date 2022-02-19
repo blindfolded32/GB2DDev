@@ -2,21 +2,24 @@
 using Item;
 using UnityEngine;
 
-public class InventoryView : IInventoryView
+namespace Features.InventoryFeature
 {
-    public void Display(IReadOnlyList<IItem> items)
+    public class InventoryView : IInventoryView
     {
-        foreach(var item in items)
-            Debug.Log($"Id item: {item.Id}. Title item: {item.Info.Title}");
-    }
+        public void Display(IReadOnlyList<IItem> items)
+        {
+            foreach(var item in items)
+                Debug.Log($"Id item: {item.Id}. Title item: {item.Info.Title}");
+        }
 
-    public void Show()
-    {
-        throw new System.NotImplementedException();
-    }
+        public void Show()
+        {
+            throw new System.NotImplementedException();
+        }
 
-    public void Hide()
-    {
-        throw new System.NotImplementedException();
+        public void Hide()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

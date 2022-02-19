@@ -1,5 +1,6 @@
 ﻿using System;
-using Data;
+
+using Features.AbilitiesFeature;
 using JetBrains.Annotations;
 using UnityEngine;
 using Object = UnityEngine.Object;

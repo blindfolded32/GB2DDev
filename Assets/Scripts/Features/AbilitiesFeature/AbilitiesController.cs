@@ -1,9 +1,10 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
+using CommonClasses;
+using Features.InventoryFeature;
 using Item;
 using Tools;
 
-namespace Data
+namespace Features.AbilitiesFeature
 {
     public class AbilitiesController : BaseController
     {

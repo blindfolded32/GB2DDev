@@ -27,7 +27,6 @@ public class Root : MonoBehaviour
         _analyticsTools = new UnityAnalyticTools();
         var profilePlayer = new ProfilePlayer(15f, _ads, _analyticsTools);
         _mainController = new MainController(_placeForUi, profilePlayer, _upgradeSource.ItemConfigs.ToList(), _abilityItems.AsReadOnly());
-
         profilePlayer.CurrentState.Value = GameState.Start;
     }
 

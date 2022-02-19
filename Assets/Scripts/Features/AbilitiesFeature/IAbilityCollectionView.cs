@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Item;
-using UI;
+﻿using UI;
 
-public interface IAbilityCollectionView: IView
-
+namespace Features.AbilitiesFeature
 {
+    public interface IAbilityCollectionView: IView
+
+    {
    
+    }
 }

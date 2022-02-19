@@ -21,11 +21,7 @@
             <e p="Swipe.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
-            <e p="AbilitiesCollectionViewStub.cs" t="Include" />
-            <e p="AbilityGroupView.cs" t="Include" />
             <e p="AbilityItemConfig.cs" t="Include" />
-            <e p="AbilityView.cs" t="Include" />
-            <e p="IAbilityRepository.cs" t="Include" />
             <e p="ItemConfig.cs" t="Include" />
             <e p="ItemsSource.cs" t="Include" />
             <e p="UpgradeItemConfig.cs" t="Include" />
@@ -37,6 +33,7 @@
               <e p="AbilitiesCollectionViewStub.cs" t="Include" />
               <e p="AbilitiesController.cs" t="Include" />
               <e p="AbilitiesView.cs" t="Include" />
+              <e p="AbilityGroupView.cs" t="Include" />
               <e p="AbilityItemView.cs" t="Include" />
               <e p="AbilityRepository.cs" t="Include" />
               <e p="AbilityType.cs" t="Include" />

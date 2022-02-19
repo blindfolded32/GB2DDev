@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
+using CommonClasses;
 using Data;
-using Item;
 using Tools;
 
-public class ItemsRepository : BaseController, IRepository<int, IItem>
+namespace Item
 {
-    public IReadOnlyDictionary<int, IItem> Content => _itemsMapById;
-    private Dictionary<int, IItem> _itemsMapById = new Dictionary<int, IItem>();
-    public ItemsRepository(List<ItemConfig> itemConfigs)
+    public class ItemsRepository : BaseController, IRepository<int, IItem>
+    {
+        public IReadOnlyDictionary<int, IItem> Content => _itemsMapById;
+        private Dictionary<int, IItem> _itemsMapById = new Dictionary<int, IItem>();
+        public ItemsRepository(List<ItemConfig> itemConfigs)
         {
             PopulateItems(itemConfigs);
         }
@@ -27,7 +29,7 @@ public class ItemsRepository : BaseController, IRepository<int, IItem>
         }
         private IItem CreateItem(ItemConfig itemConfig)
         {
-            return new Item.Item
+            return new global::Item.Item
             {
                 Id = itemConfig.Id,
                 Info = new ItemInfo { Title = itemConfig.Title },
@@ -35,6 +37,7 @@ public class ItemsRepository : BaseController, IRepository<int, IItem>
             };
         }
     }
+}
 
 
 

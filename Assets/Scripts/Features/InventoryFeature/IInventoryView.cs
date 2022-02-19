@@ -2,7 +2,10 @@
 using Item;
 using UI;
 
-public interface IInventoryView:IView
+namespace Features.InventoryFeature
 {
-    void Display(IReadOnlyList<IItem> items);
+    public interface IInventoryView:IView
+    {
+        void Display(IReadOnlyList<IItem> items);
+    }
 }

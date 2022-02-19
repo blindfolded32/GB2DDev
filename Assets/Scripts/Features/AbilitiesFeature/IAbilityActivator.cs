@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Data
+namespace Features.AbilitiesFeature
 {
     public interface IAbilityActivator
     {

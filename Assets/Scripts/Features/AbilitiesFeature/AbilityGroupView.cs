@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Features.AbilitiesFeature;
 using Item;
 using UnityEngine;
 
@@ -7,27 +8,27 @@ namespace Data
 {
     public class AbilityGroupView : MonoBehaviour, IAbilityCollectionView
     {
-        [SerializeField] private AbilityView _view;
+        [SerializeField] private AbilitiesView _view;
         [SerializeField] private Transform _layout;
 
-        private List<AbilityView> _currentViews = new List<AbilityView>();
+        private List<AbilitiesView> _currentViews = new List<AbilitiesView>();
 
-        public event EventHandler<IItem> UseRequested;
+        public event EventHandler<IReadOnlyList<IItem>> UseRequested;
         public void Display(IReadOnlyList<IItem> abilityItems)
         {
-            foreach (var ability in abilityItems)
+            foreach (IReadOnlyList<IItem> ability in abilityItems)
             {
-                var view = Instantiate<AbilityView>(_view, _layout);
-                view.OnClick += AbilityHandler;
-                view.Init(ability);
+                var view = Instantiate<AbilitiesView>(_view, _layout);
+               // view.OnClick += AbilityHandler;
+                view.Display(ability);
                 _currentViews.Add(view);
             }
         }
 
-        private void AbilityHandler(IItem obj)
+      /*  private void AbilityHandler(IItem obj)
         {
             UseRequested?.Invoke(this, obj);
-        }
+        }*/
 
         public void Show()
         {
