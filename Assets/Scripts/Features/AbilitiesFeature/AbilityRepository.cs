@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD:Assets/Scripts/Data/AbilityRepository.cs
 using Player;
 using UnityEngine.Events;
 
@@ -8,6 +9,14 @@ namespace Data
     public class AbilityRepository : BaseController, IAbilityRepository
     {
         public IReadOnlyDictionary<int, IAbility> AbilitiesMap { get => _abilitiesMap; }
+=======
+using Tools;
+using UnityEngine;
+
+public class AbilityRepository : BaseController, IRepository<int, IAbility>
+{
+    public IReadOnlyDictionary<int, IAbility> Content { get => _abilitiesMap; }
+>>>>>>> upstream/Lesson4:Assets/Scripts/Features/AbilitiesFeature/AbilityRepository.cs
 
         private Dictionary<int, IAbility> _abilitiesMap = new Dictionary<int, IAbility>();
         private readonly Action<float> _abilityListener;
