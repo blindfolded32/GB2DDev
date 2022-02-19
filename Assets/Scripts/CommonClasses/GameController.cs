@@ -1,15 +1,17 @@
-﻿using Model;
+﻿using System.Collections.Generic;
+using Data;
+using InputControllers;
 using Player;
 using Tools;
-
-//using Tools.Rx;
-//using UI.BackGround;
+using UI.BackGround;
+using UI.Inventory;
+using UnityEngine;
 
 namespace CommonClasses
 {
-    public class GameController : BaseController
+    public class GameController : global::BaseController
     {
-        public GameController(ProfilePlayer profilePlayer)
+        public GameController(ProfilePlayer profilePlayer, IReadOnlyList<AbilityItemConfig> configs, InventoryModel inventoryModel, Transform iuTransform)
         {
             var leftMoveDiff = new SubscriptionProperty<float>();
             var rightMoveDiff = new SubscriptionProperty<float>();
@@ -22,6 +24,17 @@ namespace CommonClasses
             
             var carController = new CarController();
             AddController(carController);
+
+          //  var abilityRepository = new AbilityRepository(configs);
+          var abilityRepository = new AbilityRepository(configs, profilePlayer.CurrentCar.AbilityListener);
+          var abilityViewPrefab = ResourceLoader.LoadPrefab(new ResourcePath() { PathResource = "Prefabs/AbilitiesGroupView" });
+          var abilityGroupView = GameObject.Instantiate(abilityViewPrefab, iuTransform).GetComponent<AbilityGroupView>();
+          
+            var abilitiesController = new AbilitiesController(carController, inventoryModel, abilityRepository,
+                abilityGroupView);
+                //  new AbilitiesCollectionViewStub());
+                AddController(abilitiesController);
+
         }
     }
 }

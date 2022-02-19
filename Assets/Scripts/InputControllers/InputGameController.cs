@@ -1,27 +1,26 @@
-﻿using CommonClasses;
-using InputControllers;
-using Player;
-using Tools;
+﻿using Tools;
 using UnityEngine;
 
-
-public class InputGameController : BaseController
+namespace InputControllers
 {
-    public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, Car car)
+    public class InputGameController : BaseController
     {
-        _view = LoadView();
-        _view.Init(leftMove, rightMove, car.Speed);
-    }
+        public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, IUpgradeableCar car)
+        {
+            _view = LoadView();
+            _view.Init(leftMove, rightMove, car.Speed);
+        }
 
-    private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/AccInput"};
-    private BaseInputView _view;
+        private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/AccInput"};
+        private BaseInputView _view;
 
-    private BaseInputView LoadView()
-    {
-        var objView = Object.Instantiate(ResourceLoader.LoadPrefab(_viewPath));
-        AddGameObjects(objView);
+        private BaseInputView LoadView()
+        {
+            var objView = Object.Instantiate(ResourceLoader.LoadPrefab(_viewPath));
+            AddGameObjects(objView);
         
-        return objView.GetComponent<BaseInputView>();
+            return objView.GetComponent<BaseInputView>();
+        }
     }
 }
 
