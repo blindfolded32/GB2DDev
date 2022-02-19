@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using Profile;
+using CommonClasses;
+using Player;
 using UnityEngine;
-using UnityEngine.Advertisements;
+
 
 public class MainMenuController : BaseController
 {

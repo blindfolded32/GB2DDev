@@ -1,24 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD:Assets/Scripts/Data/AbilityRepository.cs
+using Data;
 using Player;
-using UnityEngine.Events;
-
-namespace Data
-{
-    public class AbilityRepository : BaseController, IAbilityRepository
-    {
-        public IReadOnlyDictionary<int, IAbility> AbilitiesMap { get => _abilitiesMap; }
-=======
 using Tools;
 using UnityEngine;
 
 public class AbilityRepository : BaseController, IRepository<int, IAbility>
 {
     public IReadOnlyDictionary<int, IAbility> Content { get => _abilitiesMap; }
->>>>>>> upstream/Lesson4:Assets/Scripts/Features/AbilitiesFeature/AbilityRepository.cs
-
-        private Dictionary<int, IAbility> _abilitiesMap = new Dictionary<int, IAbility>();
+    private Dictionary<int, IAbility> _abilitiesMap = new Dictionary<int, IAbility>();
         private readonly Action<float> _abilityListener;
 
         public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities, Action<float> abilityListener)
@@ -29,6 +19,11 @@ public class AbilityRepository : BaseController, IRepository<int, IAbility>
             {
                 _abilitiesMap[config.Id] = CreateAbility(config);
             }
+        }
+
+        public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities)
+        {
+            Debug.Log($"Load abilities {abilities}");
         }
 
         private IAbility CreateAbility(AbilityItemConfig config)
@@ -48,8 +43,7 @@ public class AbilityRepository : BaseController, IRepository<int, IAbility>
             }
         }
     }
-
-    public class AbilityStub : IAbility
+public class AbilityStub : IAbility
     {
         public static AbilityStub Default { get; } = new AbilityStub();
 
@@ -57,4 +51,3 @@ public class AbilityRepository : BaseController, IRepository<int, IAbility>
         {
         }
     }
-}

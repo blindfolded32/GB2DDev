@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Item;
 
 public class InventoryModel : IInventoryModel
 {

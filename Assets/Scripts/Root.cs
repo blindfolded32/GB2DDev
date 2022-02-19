@@ -26,11 +26,8 @@ public class Root : MonoBehaviour
         var _shopTools = new ShopTools(_products);
         _analyticsTools = new UnityAnalyticTools();
         var profilePlayer = new ProfilePlayer(15f, _ads, _analyticsTools);
-<<<<<<< HEAD
-        _mainController = new MainController(_placeForUi, profilePlayer,_analyticsTools,_ads, _shopTools,_items, _upgradeSource.ItemConfigs.ToList(), _abilityItems.AsReadOnly());
-=======
         _mainController = new MainController(_placeForUi, profilePlayer, _upgradeSource.ItemConfigs.ToList(), _abilityItems.AsReadOnly());
->>>>>>> upstream/Lesson4
+
         profilePlayer.CurrentState.Value = GameState.Start;
     }
 

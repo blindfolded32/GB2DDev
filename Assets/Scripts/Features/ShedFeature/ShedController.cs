@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
+using Data;
+using Item;
+using Player;
 using UnityEngine;
 
 public class ShedController : BaseController, IShedController
 {
     private readonly IReadOnlyList<UpgradeItemConfig> _upgradeItems;
-    private readonly Car _car;
+    private readonly IUpgradeableCar _car;
     private readonly UpgradeHandlerRepository _upgradeRepository;
     private readonly InventoryController _inventoryController;
     private readonly InventoryModel _model;
 
-    public ShedController(IReadOnlyList<UpgradeItemConfig> upgradeItems, List<ItemConfig> items, Car car)
+    public ShedController(IReadOnlyList<UpgradeItemConfig> upgradeItems, List<ItemConfig> items, IUpgradeableCar car)
     {
         _upgradeItems = upgradeItems;
         _car = car;

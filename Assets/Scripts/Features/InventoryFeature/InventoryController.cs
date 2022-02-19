@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Data;
+using Item;
 using Tools;
 
 public class InventoryController : BaseController, IInventoryController

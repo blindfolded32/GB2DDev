@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class InputGameController : BaseController
 {
-    public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, Car car)
+    public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, IUpgradeableCar car)
     {
         _view = LoadView();
         _view.Init(leftMove, rightMove, car.Speed);
     }
 
-    private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/StickControl"};
+    private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/TouchInput"};
     private BaseInputView _view;
 
     private BaseInputView LoadView()

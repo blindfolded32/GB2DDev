@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Item;
 using UI;
 
 public interface IInventoryView:IView

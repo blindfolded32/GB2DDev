@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using Data;
-=======
 using Tools;
->>>>>>> upstream/Lesson4
 
 public class UpgradeHandlerRepository : BaseController, IRepository<int, IUpgradeCarHandler>
 {

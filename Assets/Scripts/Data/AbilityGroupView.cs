@@ -29,5 +29,14 @@ namespace Data
             UseRequested?.Invoke(this, obj);
         }
 
+        public void Show()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Hide()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
