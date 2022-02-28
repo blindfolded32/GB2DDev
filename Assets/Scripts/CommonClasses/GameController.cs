@@ -1,17 +1,18 @@
 ﻿using System.Collections.Generic;
 using Data;
-using InputControllers;
+using Features.AbilitiesFeature;
+using Features.InventoryFeature;
+using Input;
 using Player;
 using Tools;
 using UI.BackGround;
-using UI.Inventory;
 using UnityEngine;
 
 namespace CommonClasses
 {
-    public class GameController : global::BaseController
+    public class GameController : BaseController
     {
-        public GameController(ProfilePlayer profilePlayer, IReadOnlyList<AbilityItemConfig> configs, InventoryModel inventoryModel, Transform iuTransform)
+        public GameController(ProfilePlayer profilePlayer, IReadOnlyList<AbilityItemConfig> configs, InventoryModel inventoryModel, Transform uiRoot)
         {
             var leftMoveDiff = new SubscriptionProperty<float>();
             var rightMoveDiff = new SubscriptionProperty<float>();
@@ -25,15 +26,14 @@ namespace CommonClasses
             var carController = new CarController();
             AddController(carController);
 
-          //  var abilityRepository = new AbilityRepository(configs);
-          var abilityRepository = new AbilityRepository(configs, profilePlayer.CurrentCar.AbilityListener);
-          var abilityViewPrefab = ResourceLoader.LoadPrefab(new ResourcePath() { PathResource = "Prefabs/AbilitiesGroupView" });
-          var abilityGroupView = GameObject.Instantiate(abilityViewPrefab, iuTransform).GetComponent<AbilityGroupView>();
-          
+            var abilityRepository = new AbilityRepository(configs);
+            var abilityView =
+                ResourceLoader.LoadAndInstantiateView<AbilitiesView>(
+                    new ResourcePath() { PathResource = "Prefabs/AbilitiesView" }, uiRoot);
+
             var abilitiesController = new AbilitiesController(carController, inventoryModel, abilityRepository,
-                abilityGroupView);
-                //  new AbilitiesCollectionViewStub());
-                AddController(abilitiesController);
+                abilityView);
+            AddController(abilitiesController);
 
         }
     }

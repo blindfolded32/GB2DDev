@@ -13,6 +13,8 @@ namespace CommonClasses
     
         public void Dispose()
         {
+            OnDispose();
+
             if (_isDisposed) 
                 return;
         
@@ -27,8 +29,6 @@ namespace CommonClasses
                 Object.Destroy(cachedGameObject);
                 
             _gameObjects.Clear();
-
-            OnDispose();
         }
 
         protected void AddController(BaseController baseController)

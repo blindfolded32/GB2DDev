@@ -1,4 +1,6 @@
-﻿using Data;
+﻿using CommonClasses;
+
+using Features.AbilitiesFeature;
 using UnityEngine;
 
 namespace Player
