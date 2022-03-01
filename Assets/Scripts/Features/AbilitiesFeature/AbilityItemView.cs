@@ -9,10 +9,14 @@ namespace Features.AbilitiesFeature
     {
         [SerializeField]
         private Button _button;
+        [SerializeField]
+        private Text _buttonText;
 
         public event Action<IItem> OnClick;
 
         private IItem _item;
+
+        public IItem Item { get => _item; }
 
         public void Init(IItem item)
         {
@@ -29,6 +33,10 @@ namespace Features.AbilitiesFeature
             OnClick?.Invoke(_item);
         }
 
+        public void SetInteractableState(bool isOnCooldown)
+        {
+            _button.interactable = !isOnCooldown;
+        }
         private void OnDestroy()
         {
             OnClick = null;

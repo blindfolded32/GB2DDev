@@ -11,17 +11,24 @@ namespace Features.AbilitiesFeature
     public class AbilityRepository : BaseController, IRepository<int, IAbility>
     {
         public IReadOnlyDictionary<int, IAbility> Content { get => _abilitiesMap; }
+        public Action<bool, IAbility> CooldownNotification { get; set; }
+
         private Dictionary<int, IAbility> _abilitiesMap = new Dictionary<int, IAbility>();
-        private readonly Action<float> _abilityListener;
+        private ProfilePlayer _profilePlayer;
 
-        public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities)//, Action<float> abilityListener)
+        public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities, ProfilePlayer profilePlayer)
         {
-           // _abilityListener = abilityListener;
-
+            _profilePlayer = profilePlayer;
             foreach (var config in abilities)
             {
                 _abilitiesMap[config.Id] = CreateAbility(config);
+                _abilitiesMap[config.Id].IsOnCooldown.SubscribeOnChange(NotifyAboutCooldownState);
             }
+        }
+        
+        private void NotifyAboutCooldownState(bool isOnCooldown, IAbility ability)
+        {
+            CooldownNotification?.Invoke(isOnCooldown, ability);
         }
 
         private IAbility CreateAbility(AbilityItemConfig config)
@@ -48,5 +55,8 @@ namespace Features.AbilitiesFeature
         public void Apply(IAbilityActivator activator)
         {
         }
+
+        public SubscriptionPropertyWithClassInfo<bool, IAbility> IsOnCooldown { get; }
+        public AbilityItemConfig Config { get; }
     }
 }

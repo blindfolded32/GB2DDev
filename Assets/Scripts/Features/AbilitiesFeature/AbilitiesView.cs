@@ -26,13 +26,18 @@ namespace Features.AbilitiesFeature
 
         public event EventHandler<IItem> UseRequested;
 
-        public void Display(IReadOnlyList<IItem> abilityItems)
+        public void Display(IReadOnlyList<IItem> abilityItems, IAbilityRepository<int, IAbility> abilityRepository)
         {
-            foreach (var ability in abilityItems)
+            foreach (var abilityItem in abilityItems)
             {
-                var view = Instantiate<AbilityItemView>(_viewPrefab, _layout);
-                view.Init(ability);
-                view.OnClick += OnRequested;
+                if(abilityRepository.Content.ContainsKey(abilityItem.Id))
+                {
+                    var view = Instantiate<AbilityItemView>(_viewPrefab, _layout);
+                    view.Init(abilityItem);
+                    view.OnClick += OnRequested;
+                    view.SetText(abilityItem.Info.Title);
+                    _currentViews.Add(view);
+                }
             }
         }
 

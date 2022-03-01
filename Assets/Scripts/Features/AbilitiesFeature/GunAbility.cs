@@ -1,28 +1,38 @@
 ﻿using System;
-using JetBrains.Annotations;
+using Data;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Tools;
+using DG.Tweening;
 
 namespace Features.AbilitiesFeature
 {
     public class GunAbility : IAbility
     {
+        private readonly AbilityItemConfig _config;
         private readonly Rigidbody2D _viewPrefab;
-        private readonly float _projectileSpeed;
+        public SubscriptionPropertyWithClassInfo<bool, IAbility> IsOnCooldown { get; }
+        
+        public AbilityItemConfig Config => _config;
 
-        public GunAbility(
-            [NotNull] GameObject viewPrefab,
-            float projectileSpeed)
+        public GunAbility(AbilityItemConfig abilityItemConfig)
         {
-            _viewPrefab = viewPrefab.GetComponent<Rigidbody2D>();
+            _config = abilityItemConfig;
+            _viewPrefab = abilityItemConfig.View.GetComponent<Rigidbody2D>();
             if (_viewPrefab == null) throw new InvalidOperationException($"{nameof(GunAbility)} view requires {nameof(Rigidbody2D)} component!");
-            _projectileSpeed = projectileSpeed;
+            IsOnCooldown = new SubscriptionPropertyWithClassInfo<bool, IAbility>(this);
         }
 
         public void Apply(IAbilityActivator activator)
         {
+            IsOnCooldown.Value = true;
             var projectile = Object.Instantiate(_viewPrefab);
-            projectile.AddForce(activator.GetViewObject().transform.right * _projectileSpeed, ForceMode2D.Force);
+            projectile.AddForce(activator.GetViewObject().transform.right * _config.value, ForceMode2D.Impulse);
+            var seq = DOTween.Sequence().AppendInterval(_config.duration).OnComplete(() => Object.Destroy(projectile.gameObject));
+
+            var cooldownTimer = new Timer(_config.cooldown);
+            cooldownTimer.TimerIsOver += EndCooldown;
+            TimersList.AddTimer(cooldownTimer);
         }
     }
 }

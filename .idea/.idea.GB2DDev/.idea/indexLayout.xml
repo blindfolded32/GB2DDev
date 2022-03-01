@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelUserStore">
-    <attachedFolders />
-    <explicitIncludes>
+    <attachedFolders>
       <Path>../../../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@4.0.0</Path>
       <Path>../../../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ide.visualstudio@2.0.11</Path>
       <Path>../../../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@4.1.2</Path>
+    </attachedFolders>
+    <explicitIncludes>
       <Path>Library/PackageCache/com.unity.2d.animation@7.0.1</Path>
       <Path>Library/PackageCache/com.unity.2d.common@6.0.0</Path>
       <Path>Library/PackageCache/com.unity.2d.path@5.0.1</Path>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Data;
 using Item;
 
 namespace Features.InventoryFeature
@@ -6,7 +7,9 @@ namespace Features.InventoryFeature
     public interface IInventoryModel
     {
         IReadOnlyList<IItem> GetEquippedItems();
-        void EquipItem(IItem item);
+        IReadOnlyList<UpgradeItemConfig> GetUpgrades();
+        void EquipBaseItem(IItem item);
         void UnEquipItem(IItem item);
+        void UpdateUpgradesList(List<UpgradeItemConfig> upgradeItems);
     }
 }
