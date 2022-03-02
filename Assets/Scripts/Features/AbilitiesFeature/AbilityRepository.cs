@@ -4,26 +4,25 @@ using CommonClasses;
 using Data;
 using Player;
 using Tools;
-using UnityEngine;
 
 namespace Features.AbilitiesFeature
 {
     public class AbilityRepository : BaseController, IRepository<int, IAbility>
     {
         public IReadOnlyDictionary<int, IAbility> Content { get => _abilitiesMap; }
+        public Action<bool, IAbility> CooldownNotification { get; set; }
+
         private Dictionary<int, IAbility> _abilitiesMap = new Dictionary<int, IAbility>();
-        private readonly Action<float> _abilityListener;
+        private ProfilePlayer _profilePlayer;
 
-        public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities)//, Action<float> abilityListener)
+        public AbilityRepository(IReadOnlyList<AbilityItemConfig> abilities, ProfilePlayer profilePlayer)
         {
-           // _abilityListener = abilityListener;
-
+            _profilePlayer = profilePlayer;
             foreach (var config in abilities)
             {
                 _abilitiesMap[config.Id] = CreateAbility(config);
             }
         }
-
         private IAbility CreateAbility(AbilityItemConfig config)
         {
             switch (config.Type)
@@ -31,7 +30,7 @@ namespace Features.AbilitiesFeature
                 case AbilityType.None:
                     return AbilityStub.Default;
                 case AbilityType.Gun:
-                    return new GunAbility(config.View, config.value);
+                    return new GunAbility(config);
                 case AbilityType.Speed:
                     return new SpeedAbility(config.View, config.value);
                 case AbilityType.Oil:
@@ -48,5 +47,6 @@ namespace Features.AbilitiesFeature
         public void Apply(IAbilityActivator activator)
         {
         }
+        public AbilityItemConfig Config { get; }
     }
 }

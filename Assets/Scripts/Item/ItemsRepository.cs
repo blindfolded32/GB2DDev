@@ -29,11 +29,10 @@ namespace Item
         }
         private IItem CreateItem(ItemConfig itemConfig)
         {
-            return new global::Item.Item
+            return new Item
             {
                 Id = itemConfig.Id,
-                Info = new ItemInfo { Title = itemConfig.Title },
-                ItemIcon = itemConfig.ItemIcon
+                Info = new ItemInfo {Title = itemConfig.Title}
             };
         }
     }

@@ -6,7 +6,8 @@ namespace Input
 {
     public class InputAcceleration : BaseInputView
     {
-        public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
+        public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove,
+             float speed)
         {
             base.Init(leftMove, rightMove, speed);
             UpdateManager.SubscribeToUpdate(Move);
@@ -19,13 +20,13 @@ namespace Input
 
         private void Move()
         {
-            var direction = Vector3.zero; 
+            var direction = Vector3.zero;
             direction.x = -UnityEngine.Input.acceleration.y;
             direction.z = UnityEngine.Input.acceleration.x;
-        
+
             if (direction.sqrMagnitude > 1)
                 direction.Normalize();
-        
+
             OnRightMove(direction.sqrMagnitude / 20 * _speed);
         }
     }

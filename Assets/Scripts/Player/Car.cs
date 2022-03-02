@@ -3,14 +3,16 @@
     public class Car : IUpgradeableCar
     {
         public float Speed { get; set; }
+        private float _defaultSpeed;
         public void Restore()
         {
-            throw new System.NotImplementedException();
+            Speed = _defaultSpeed;
         }
 
         public Car(float speed)
         {
-            Speed = speed;
+            _defaultSpeed = speed;
+            Restore();
         }
         
         public void AbilityListener(float speed)
