@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Data;
 using Features.AbilitiesFeature;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -26,5 +26,7 @@ namespace Player
             var projectile = Object.Instantiate(_viewPrefab);
             projectile.AddForce(activator.GetViewObject().transform.right * _projectileSpeed, ForceMode2D.Force);
         }
+
+        public AbilityItemConfig Config { get; }
     }
 }

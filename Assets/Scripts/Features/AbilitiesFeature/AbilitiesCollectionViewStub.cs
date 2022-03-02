@@ -8,6 +8,13 @@ namespace Features.AbilitiesFeature
     public class AbilitiesCollectionViewStub : IAbilityCollectionView
     {
         public event EventHandler<IItem> UseRequested;
+        public void Display(IReadOnlyList<IItem> abilityItems, IAbilityRepository<int, IAbility> abilityRepository)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<AbilityItemView> AbilityViews { get; }
+
         public void Display(IReadOnlyList<IItem> abilityItems)
         {
             foreach (var item in abilityItems)

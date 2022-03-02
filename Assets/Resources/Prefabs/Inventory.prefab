@@ -98,6 +98,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7388008335477092836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cd0eb9deb18413f9f9a25ca111f4547, type: 3}
+  m_Script: {fileID: 11500000, guid: 776fd12578cd5934486c065caa02e4bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transmissionDropDown: {fileID: 0}
+  _tiresDropDown: {fileID: 0}
+  _windowDropDown: {fileID: 0}
+  _saveButton: {fileID: 0}
+  _saveButtonText: {fileID: 0}

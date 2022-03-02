@@ -4,7 +4,6 @@ using CommonClasses;
 using Data;
 using Player;
 using Tools;
-using UnityEngine;
 
 namespace Features.AbilitiesFeature
 {
@@ -22,15 +21,8 @@ namespace Features.AbilitiesFeature
             foreach (var config in abilities)
             {
                 _abilitiesMap[config.Id] = CreateAbility(config);
-                _abilitiesMap[config.Id].IsOnCooldown.SubscribeOnChange(NotifyAboutCooldownState);
             }
         }
-        
-        private void NotifyAboutCooldownState(bool isOnCooldown, IAbility ability)
-        {
-            CooldownNotification?.Invoke(isOnCooldown, ability);
-        }
-
         private IAbility CreateAbility(AbilityItemConfig config)
         {
             switch (config.Type)
@@ -38,7 +30,7 @@ namespace Features.AbilitiesFeature
                 case AbilityType.None:
                     return AbilityStub.Default;
                 case AbilityType.Gun:
-                    return new GunAbility(config.View, config.value);
+                    return new GunAbility(config);
                 case AbilityType.Speed:
                     return new SpeedAbility(config.View, config.value);
                 case AbilityType.Oil:
@@ -55,8 +47,6 @@ namespace Features.AbilitiesFeature
         public void Apply(IAbilityActivator activator)
         {
         }
-
-        public SubscriptionPropertyWithClassInfo<bool, IAbility> IsOnCooldown { get; }
         public AbilityItemConfig Config { get; }
     }
 }

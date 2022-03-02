@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using CommonClasses;
+using Data;
+using Features.InventoryFeature;
 using Player;
 using UnityEngine;
 
@@ -9,15 +11,18 @@ public class MainMenuController : BaseController
     private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/mainMenu"};
     private readonly ProfilePlayer _profilePlayer;
     private readonly MainMenuView _view;
+    private readonly ShedController _shedController;
 
-    public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer)
+    public MainMenuController(Transform placeForUi, ProfilePlayer profilePlayer, List<ItemConfig> itemsConfig, 
+        IReadOnlyList<UpgradeItemConfig> upgradeItems, InventoryController inventoryController)
     {
         _profilePlayer = profilePlayer;
         _view = LoadView(placeForUi);
+        _shedController = new ShedController(upgradeItems, itemsConfig, _profilePlayer.CurrentCar, _view.transform, inventoryController);
         AddGameObjects(_view.gameObject);
-        _view.Init(StartGame);
+        _view.Init(StartGame, _shedController.Enter);
     }
-    
+
     private MainMenuView LoadView(Transform placeForUi)
     {
         return ResourceLoader.LoadAndInstantiateView<MainMenuView>(_viewPath, placeForUi);
@@ -29,7 +34,8 @@ public class MainMenuController : BaseController
 
         _profilePlayer.AnalyticTools.SendMessage("start_game",
             new Dictionary<string, object>() { {"time", Time.realtimeSinceStartup }
-    });
+            });
+    }
 }
-}
+
 

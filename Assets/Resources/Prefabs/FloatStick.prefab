@@ -32,6 +32,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7474947135060163299}
   m_Father: {fileID: 0}
@@ -101,11 +102,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7474947135079837761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf12cb642c2bca438a57006369de91b, type: 3}
+  m_Script: {fileID: 11500000, guid: 210cf13679f872c48b5eb04a3b7316a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _joystick: {fileID: 7474947135091082665}
-  _joystickView: {fileID: 7474947135079837763}
+  _joystick: {fileID: 0}
+  _joystickView: {fileID: 7474947135079837761, guid: 6aa81adb621a9c84a979bdabe6abb3aa,
+    type: 3}
 --- !u!222 &5966656650857031124
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -129,6 +131,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -161,7 +164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7474947135060163299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -172,6 +175,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7474947135060163297}
   m_RootOrder: 0
@@ -204,6 +208,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -58,7 +58,6 @@
               <e p="AbilitiesCollectionViewStub.cs" t="Include" />
               <e p="AbilitiesController.cs" t="Include" />
               <e p="AbilitiesView.cs" t="Include" />
-              <e p="AbilityGroupView.cs" t="Include" />
               <e p="AbilityItemView.cs" t="Include" />
               <e p="AbilityRepository.cs" t="Include" />
               <e p="AbilityType.cs" t="Include" />

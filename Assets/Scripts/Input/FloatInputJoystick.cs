@@ -12,19 +12,19 @@ namespace Input
 
         [SerializeField] private Joystick _joystick;
         [SerializeField] private GameObject _joystickView;
+        
         private CanvasGroup _container;
-
         private Vector3 _defaultPosition;
-
         private bool _usedJoystick;
 
         #endregion
 
         #region Methods
 
-        public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
+        public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, 
+            float speed)
         {
-            base.Init(leftMove, rightMove, speed);
+            base.Init(leftMove, rightMove,  speed);
             _defaultPosition = transform.position;
             _joystickView.SetActive(false);
             Debug.Log($"On Init:{_joystickView.activeSelf}");

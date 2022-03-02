@@ -4,7 +4,6 @@ using Data;
 using Item;
 using UI;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Features.InventoryFeature
 {

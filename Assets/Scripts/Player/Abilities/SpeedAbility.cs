@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-
+using Data;
 using Features.AbilitiesFeature;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -28,5 +28,7 @@ namespace Player
             var firePrefab = Object.Instantiate(_viewPrefab);
             OnSpeedBoost?.Invoke(_boostSpeed);
         }
+
+        public AbilityItemConfig Config { get; }
     }
 }

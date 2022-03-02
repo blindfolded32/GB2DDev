@@ -5,7 +5,6 @@ using Data;
 using DG.Tweening;
 using Item;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Features.InventoryFeature

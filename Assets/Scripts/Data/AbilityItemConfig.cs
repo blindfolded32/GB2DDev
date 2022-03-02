@@ -10,6 +10,7 @@ namespace Data
         public GameObject View;
         public AbilityType Type;
         public float value;
+        public float duration;
         public int Id => Item.Id;
     }
 }
