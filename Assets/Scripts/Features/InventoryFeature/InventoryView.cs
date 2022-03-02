@@ -84,7 +84,7 @@ namespace Features.InventoryFeature
         _seq?.Complete(true);
 
         _scaleTween = transform.DOScale(Vector3.one, 0.5f);
-        _rotationTween = transform.DOPunchRotation(new Vector3(0, 0, 360), 0.5f);
+        _rotationTween = transform.DOPunchPosition(new Vector3(0, 1, 0), 0.5f);//DOPunchRotation(new Vector3(0, 0, 360), 0.5f);
 
         _seq = DOTween.Sequence();
         _seq.Append(_scaleTween.OnComplete(() => _scaleTween = null));

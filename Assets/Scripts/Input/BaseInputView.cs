@@ -7,7 +7,6 @@ namespace Input
     {
         private SubscriptionProperty<float> _leftMove;
         private SubscriptionProperty<float> _rightMove;
-
         protected float _speed;
 
         public virtual void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)

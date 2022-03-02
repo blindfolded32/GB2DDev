@@ -21,7 +21,7 @@ public class ShedController : BaseController, IShedController
         _inventoryController = inventoryController;
         _inventoryController.SetInventoryViewPosition(placeForUI);
         _model = _inventoryController.Model;
-        _inventoryController.CloseAndSaveInventory += Exit;
+        _inventoryController.OnInventoryClose += Exit;
     }
 
     public void Enter()
@@ -52,7 +52,7 @@ public class ShedController : BaseController, IShedController
 
     public new void OnDispose()
     {
-        _inventoryController.CloseAndSaveInventory -= Exit;
+        _inventoryController.OnInventoryClose -= Exit;
         base.OnDispose();
     }
 }

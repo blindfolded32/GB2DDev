@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8158514768356374577}
   - component: {fileID: 5661916924443946708}
-  - component: {fileID: 4523894603515067913}
   m_Layer: 0
   m_Name: TouchInput
   m_TagString: Untagged
@@ -46,15 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trail: {fileID: 1772331479211013672, guid: 3a9e52c1f074b8c419016875676b2112, type: 3}
---- !u!114 &4523894603515067913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4477534239826895029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71398ce7fbc3a5b4fa50b50bd54317a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -15,7 +15,7 @@ namespace Features.InventoryFeature
         private readonly IInventoryView _inventoryView;
         private readonly IRepository<int, IItem> _itemsRepository;
 
-        public Action CloseAndSaveInventory;
+        public Action OnInventoryClose;
         public IInventoryModel Model => _inventoryModel;
 
         public InventoryController(List<ItemConfig> itemConfigs, IReadOnlyList<UpgradeItemConfig> upgradeItems, Transform placeForUi)
@@ -24,10 +24,8 @@ namespace Features.InventoryFeature
             _inventoryView = ResourceLoader.LoadAndInstantiateView<InventoryView>(_viewPath, placeForUi);
             _inventoryView.Init(upgradeItems);
             _inventoryView.UpgradeSaved += _inventoryModel.UpdateUpgradesList;
-            _inventoryView.UpgradeSaved += InvetoryClosed;
-
+            _inventoryView.UpgradeSaved += CloseInventory;
             _itemsRepository = new ItemsRepository(itemConfigs);
-
             EquipBaseItems();
         }
         private void EquipBaseItems()
@@ -36,9 +34,9 @@ namespace Features.InventoryFeature
                 _inventoryModel.EquipBaseItem(item);
         }
 
-        private void InvetoryClosed(List<UpgradeItemConfig> upgradesList)
+        private void CloseInventory(List<UpgradeItemConfig> upgradesList)
         {
-            CloseAndSaveInventory?.Invoke();
+            OnInventoryClose?.Invoke();
         }
 
         public void ShowInventory()

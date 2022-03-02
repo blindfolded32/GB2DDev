@@ -9,7 +9,14 @@ namespace CommonClasses
 {
     public class MainController : BaseController
     {
-        
+        private MainMenuController _mainMenuController;
+        private GameController _gameController;
+        private InventoryController _inventoryController;
+        private readonly Transform _placeForUi;
+        private readonly ProfilePlayer _profilePlayer;
+        private readonly List<ItemConfig> _itemsConfig;
+        private readonly IReadOnlyList<UpgradeItemConfig> _upgradeItems;
+        private readonly IReadOnlyList<AbilityItemConfig> _abilityItems;
         public MainController(Transform placeForUi, ProfilePlayer profilePlayer,
         IReadOnlyList<UpgradeItemConfig> upgradeItems,
         IReadOnlyList<AbilityItemConfig> abilityItems)
@@ -31,17 +38,7 @@ namespace CommonClasses
         _inventoryController = new InventoryController(_itemsConfig, _upgradeItems, _placeForUi);
         AddController(_inventoryController);
     }
-
-    private MainMenuController _mainMenuController;
-    private GameController _gameController;
-    private InventoryController _inventoryController;
-    private readonly Transform _placeForUi;
-    private readonly ProfilePlayer _profilePlayer;
-    private readonly List<ItemConfig> _itemsConfig;
-    private readonly IReadOnlyList<UpgradeItemConfig> _upgradeItems;
-    private readonly IReadOnlyList<AbilityItemConfig> _abilityItems;
-
-    protected override void OnDispose()
+        protected override void OnDispose()
     {
         AllClear();
 
